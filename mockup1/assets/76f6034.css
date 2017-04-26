@@ -280,23 +280,39 @@ ul.ft-menu > li.ft-field {
   margin: 5px;
 }
 
-ul#container li {
-  border-bottom: 2px solid #CCC;
+ul#container > li {
+  display: inline-block;
+width: 49%;
+vertical-align: top;
 }
 
-ul.taglist li {
+ul.taglist li{
   display: inline-block;
   border-radius: 20px;
   -moz-border-radius: 20px;
   -webkit-border-radius: 20px;
   border: 2px solid #CCC;
   color: black;
-font-size: 12px;
-line-height: 10px;
-padding: 2px 9px;
-margin: 2px;
-cursor: pointer;
-font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 12px;
+  line-height: 10px;
+  padding: 2px 9px;
+  margin: 2px;
+  cursor: pointer;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+ul.editorlist li {
+  display: inline-block;
+  border-radius: 20px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border: 2px solid #CCC;
+  color: black;
+  font-size: 12px;
+  line-height: 10px;
+  padding: 2px 9px;
+  margin: 2px;
+  cursor: pointer;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 div#triggers > span {
     margin-right: 30px;
@@ -318,6 +334,39 @@ div#triggers > span:hover {
 	  cursor: default !important;
 		background-color: rgba(0, 0, 0, 0.1);
 }
+
+div#placeHolder::before{
+  content: "Filters: ";
+  font-weight: bold;
+}
+
+div#placeHolder > ul {
+  display: inline-block;
+}
+
+.Retired::after,.LastCall::after,.WorkingDraft::after,.CandidateRecommendation::after,.ProposedRecommendation::after,.Recommendation::after,.GroupNote::after,.ProposedEditedRecommendation::after {
+  margin-left: 15px;
+  border: 2px solid #CCC;
+  background-color: #357bb7;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  color: white;
+  font-size: 12px;
+  padding: 2px 9px;
+  cursor: pointer;
+  vertical-align: middle;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.Retired::after {content: "\52\65\74\69\72\65\64";}
+.LastCall::after {content: "\4C\43";}
+.WorkingDraft::after {content: "\57\44";}
+.CandidateRecommendation::after {content: "\43\52";}
+.ProposedRecommendation::after {content: "\50\52";}
+.Recommendation::after {content: "\52\45\43";}
+.GroupNote::after {content: "\4E\6F\74\65";}
+.ProposedEditedRecommendation::after {content: "\50\45\52";}
 
 li.accessibility {background-color: #21a290}
 li.aria {background-color: #a83e3c}
