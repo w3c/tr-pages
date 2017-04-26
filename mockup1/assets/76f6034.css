@@ -301,11 +301,22 @@ font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", He
 div#triggers > span {
     margin-right: 30px;
     cursor: pointer;
+		font-size: 0.8rem;
+		padding: 5px 15px;
+		border-radius: 25px;
+		border: none;
+		display: inline-block;
+		color: #2e2e2e;
+		background-color: rgba(0, 0, 0, 0.05);
+}
+div#triggers > span:hover {
+	background-color: rgba(0, 0, 0, 0.1);
 }
 .selected {
     color: #2D3743;
-    text-shadow: rgba(0, 0, 0, 0.7) 0 -1px;
-	cursor: default !important;
+		font-weight: bold;
+	  cursor: default !important;
+		background-color: rgba(0, 0, 0, 0.1);
 }
 
 li.accessibility {background-color: #21a290}
