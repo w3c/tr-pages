@@ -27,6 +27,14 @@ function collapseWarning(details) {
 const pathname = window.location.pathname;
 var spec = Object.keys(outdatedSpecs).filter(function(k) {return pathname.indexOf(k) === 0;}).shift();
 if (spec) {
+  var css = 'a#deprecationnote:hover{ background-color: transparent }';
+  var style = document.createElement('style');
+  if (style.styleSheet) {
+    style.styleSheet.cssText = css;
+  } else {
+    style.appendChild(document.createTextNode(css));
+  }
+  document.getElementsByTagName('head')[0].appendChild(style);
   var nodes = document.querySelectorAll("body, h1, h2, h3");
   for (var i = 0; i < nodes.length; i++) {
     nodes[i].setAttribute("style", "background-color: rgba(0,0,0,0.5);");
@@ -35,7 +43,7 @@ if (spec) {
   node.className = "outdatedwarning";
   node.style.cssText = "position: fixed; bottom: 50%;left: 0;right: 0;margin: 0 auto 0 auto;width: 50%;background: maroon;color:white;border-radius: 1em;box-shadow: 0 0 1em red;padding: 2em;text-align: center;z-index:2;";
 
-  node.innerHTML = '<strong>This version is outdated!</strong><div>For the latest version, please look at the <a style="color:white" href="' + outdatedSpecs[spec]+ '"> ' + outdatedSpecs[spec] + '</a>.</div><input onclick="collapseWarning(false)" style="margin: 0;border: 0;padding: 0.25em 0.5em;background: transparent;color: black;position: absolute;top: -0.5em;right: 0;font: 1.25em sans-serif;text-align: center;" type="button" value="&#9662; collapse">';
+  node.innerHTML = '<strong>This version is outdated!</strong><div>For the latest version, please look at the <a id="deprecationnote" style="color:white" href="' + outdatedSpecs[spec]+ '"> ' + outdatedSpecs[spec] + '</a>.</div><input onclick="collapseWarning(false)" style="margin: 0;border: 0;padding: 0.25em 0.5em;background: transparent;color: black;position: absolute;top: 0em;right: 0;font: 1.25em sans-serif;text-align: center;" type="button" value="&#9662; collapse">';
 
   document.querySelector("body").appendChild(node);
 }
