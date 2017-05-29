@@ -1,6 +1,6 @@
 var outdatedSpecs = {
-  "/~denis/outdatedspec/html4/" : "https://www.w3.org/TR/html51/",
-  "/~denis/outdatedspec/html-aria/" : "https://www.w3.org/TR/html-aria/"
+  "/tr-pages/outdatedspecsmockup/html4/" : "https://www.w3.org/TR/html51/",
+  "/tr-pages/outdatedspecsmockup/html-aria/" : "https://www.w3.org/TR/html-aria/"
 }
 
 function collapseWarning(details) {
