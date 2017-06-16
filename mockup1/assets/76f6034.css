@@ -344,7 +344,7 @@ div#placeHolder > ul {
   display: inline-block;
 }
 
-.Retired::after,.LastCall::after,.WorkingDraft::after,.CandidateRecommendation::after,.ProposedRecommendation::after,.Recommendation::after,.GroupNote::after,.ProposedEditedRecommendation::after {
+.Retired::after,.LastCall::after,.WorkingDraft::after,.CandidateRecommendation::after,.ProposedRecommendation::after,.Recommendation::after,.GroupNote::after,.ProposedEditedRecommendation::after, .ObsoleteRec::after {
   margin-left: 15px;
   border: 2px solid #CCC;
   background-color: #357bb7;
@@ -367,6 +367,7 @@ div#placeHolder > ul {
 .Recommendation::after {content: "\52\45\43";}
 .GroupNote::after {content: "\4E\6F\74\65";}
 .ProposedEditedRecommendation::after {content: "\50\45\52";}
+.ObsoleteRec::after {content: "\4F\42\53\4C";}
 
 li.accessibility {background-color: #21a290}
 li.aria {background-color: #a83e3c}
@@ -493,3 +494,8 @@ li.xpointer {background-color: #2e0dab}
 li.xquery {background-color: #36b260}
 li.xsl {background-color: #6e6a68}
 li.xslt {background-color: #27504c}
+
+div#legend > p > em {
+  margin-right: 5px;
+  color: #2D3743;
+}

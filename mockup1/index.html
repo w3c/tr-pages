@@ -78,18 +78,19 @@
    <div class="hierarchy tMargin">
       <div class="container">
       	<div id="placeHolder"><ul class="ft-menu"></div>
-        <div id="triggers">
-        	<strong>Search:</strong>
-        	<span id="rec">Recommendation</span>
-        	<span id="pr">Proposed recommendation</span>
-          <span id="html">HTML</span>
-          <span id="javascript">JavaScript</span>
-        </div>
+        <!-- <div id="triggers"> -->
+        	<!-- <strong>Search:</strong> -->
+        	<!-- <span id="rec">Recommendation</span> -->
+        	<!-- <span id="pr">Proposed recommendation</span> -->
+          <!-- <span id="html">HTML</span> -->
+          <!-- <span id="javascript">JavaScript</span> -->
+        <!-- </div> -->
+        <div id="legend"><i>Viewing all</i></div>
         <hr>
         <ul id="container">
-                  <li data-tags="Web Applications Manifest Formats" data-status="Working Draft" data-editors="Giridhar Mandyam, Miguel Casas-sanchez">
-          <h2 class="WorkingDraft"><a href="https://www.w3.org/TR/2016/WD-foobar-20161212/" title="Latest draft of foobar formally approved by the group">foobar</a></h2>
-          <p>Published on 2016-12-12 - <a title="foobar publication history" href="http://www.w3.org/standards/history/foobar">History</a><br>
+                  <li data-tags="Web Applications Manifest Formats" data-status="Working Draft" data-editors="Giridhar Mandyam, Miguel Casas-sanchez" data-versions="Furthest advanced">
+          <h2 class="WorkingDraft"><a href="https://www.w3.org/TR/2016/WD-appmanifest-20161212/" title="Latest draft of appmanifest formally approved by the group">App Manifest</a></h2>
+          <p>Published on 2016-12-12 - <a title="appmanifest publication history" href="http://www.w3.org/standards/history/appmanifest">History</a><br>
                                 </p><ul class="editorlist">
                             <li>Giridhar Mandyam
                             </li><li>Miguel Casas-sanchez
@@ -100,7 +101,7 @@
           <p></p>
           </li>
 
-                  <li data-tags="Javascript APIs" data-status="Proposed Edited Recommendation" data-editors="Anssi Kostiainen">
+                  <li data-tags="Javascript APIs" data-status="Proposed Edited Recommendation" data-editors="Anssi Kostiainen" data-versions="Latest">
           <h2 class="ProposedEditedRecommendation"><a href="https://www.w3.org/TR/2016/PER-vibration-20160818/" title="Latest draft of Vibration API formally approved by the group">Vibration API</a></h2>
           <p>Published on 2016-08-18 - <a title="Vibration API publication history" href="http://www.w3.org/standards/history/vibration">History</a><br>
                        <em><a href="https://w3c.github.io/vibration/" title="Latest editor's draft of Vibration API">Editor's Draft</a></em>
@@ -14947,7 +14948,7 @@ Specification publication history" href="http://www.w3.org/standards/history/P3P
           <p></p>
           </li>
                   <li data-tags="Web Applications Manifest Formats" data-status="Obsoleted Recommendation" data-editors="John Doe">
-          <h2 class="WorkingDraft"><a href="https://www.w3.org/TR/2017/OBSL-foobar-20171212/" title="Latest draft of foobar formally approved by the group">foobar</a></h2>
+          <h2 class="ObsoleteRec"><a href="https://www.w3.org/TR/2017/OBSL-foobar-20171212/" title="Latest draft of foobar formally approved by the group">foobar</a></h2>
           <p>Published on 2017-12-12 - <a title="foobar publication history" href="http://www.w3.org/standards/history/foobar">History</a><br>
                                 </p><ul class="editorlist">
                             <li>John Doe
@@ -15008,24 +15009,44 @@ W3C <sup>®</sup> (<a href="http://www.csail.mit.edu/"><abbr title="Massachusett
 <script type="text/javascript">
 $(function(){
   var ft = $.filtrify("container", "placeHolder", {
-    close : true
+    close : true,
+    callback : function( query, match, mismatch ) {
+            if ( !mismatch.length ) {
+                $("#legend").html("<i>Viewing all specifications</i>");
+            } else {
+                var category, tags, i, tag, legend = "<h4>Viewing:</h4>";
+                for ( category in query ) {
+                    tags = query[category];
+                    if ( tags.length ) {
+                        legend += "<p><span>" + category + ":</span>";
+                        for ( i = 0; i < tags.length; i++ ) {
+                            tag = tags[i];
+                            legend += "<em>" + tag + "</em>";
+                        };
+                        legend += "</p>";
+                    };
+                };
+                legend += "<p><i>" + match.length + " specification" + (match.length !== 1 ? "s" : "") + " found.</i></p>";
+                $("#legend").html( legend );
+            };
+        }
   });
 
-  $("span#rec").click(function() {
-    ft.trigger({ status : ["Recommendation"] });
-  });
-
-  $("span#pr").click(function() {
-    ft.trigger({ status : ["Proposed Recommendation"] });
-  });
-
-  $("span#html").click(function() {
-    ft.trigger({ tags : ["HTML"] });
-  });
-
-  $("span#javascript").click(function() {
-    ft.trigger({ tags : ["Javascript APIs"] });
-  });
+  // $("span#rec").click(function() {
+    // ft.trigger({ status : ["Recommendation"] });
+  // });
+// 
+  // $("span#pr").click(function() {
+    // ft.trigger({ status : ["Proposed Recommendation"] });
+  // });
+// 
+  // $("span#html").click(function() {
+    // ft.trigger({ tags : ["HTML"] });
+  // });
+// 
+  // $("span#javascript").click(function() {
+    // ft.trigger({ tags : ["Javascript APIs"] });
+  // });
 
   $("div#triggers > span").click(function() {
     $(this)
