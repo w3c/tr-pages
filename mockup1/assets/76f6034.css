@@ -286,6 +286,9 @@ width: 49%;
 vertical-align: top;
 }
 
+ul#container > li > p {
+  margin-bottom: 0;
+}
 ul.taglist li{
   display: inline-block;
   border-radius: 20px;
@@ -300,19 +303,21 @@ ul.taglist li{
   cursor: pointer;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
+ul.editorlist {
+  padding-left:0;
+  margin-bottom: 16px;
+}
 ul.editorlist li {
-  display: inline-block;
-  border-radius: 20px;
-  -moz-border-radius: 20px;
-  -webkit-border-radius: 20px;
-  border: 2px solid #CCC;
+  display: inline;
   color: black;
   font-size: 12px;
   line-height: 10px;
-  padding: 2px 9px;
-  margin: 2px;
-  cursor: pointer;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+ul.editorlist li:after {
+  content: ", ";
+}
+ul.editorlist li:last-child:after {
+  content: "";
 }
 div#triggers > span {
     margin-right: 30px;
