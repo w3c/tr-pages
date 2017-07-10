@@ -15,7 +15,7 @@ For more significant changes to the visual styles, discussion on spec-prod@w3.or
 
 ## Design guidelines
 
-See [https://github.com/w3c/tr-design/blob/gh-pages/README.md#guidelines-for-a-proper-design](Guidelines for a proper design)
+See [Guidelines for a proper design](https://github.com/w3c/tr-design/blob/gh-pages/README.md#guidelines-for-a-proper-design).
 
 ## Mockups for the /TR page
 
@@ -27,6 +27,6 @@ See [https://github.com/w3c/tr-design/blob/gh-pages/README.md#guidelines-for-a-p
   * [HTML 4](https://w3c.github.io/tr-pages/outdatedspecsmockup/html4/)
   * [HTML ARIA](https://w3c.github.io/tr-pages/outdatedspecsmockup/html-aria/)
 
-Note that we have different styles for rescinded and obsoleted specifications. See our [https://github.com/w3c/tr-design](TR design project) for those.
+Note that we have different styles for rescinded and obsoleted specifications. See our [TR design project](https://github.com/w3c/tr-design) for those.
 
 
