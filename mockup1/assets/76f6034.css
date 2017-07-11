@@ -504,3 +504,11 @@ div#legend > p > em {
   margin-right: 5px;
   color: #2D3743;
 }
+
+p.deliverer, p.deliverer + p {
+  padding-top:0;
+}
+
+p.deliverer {
+  text-decoration: underline;
+}
