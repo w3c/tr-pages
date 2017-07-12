@@ -340,6 +340,9 @@ div#triggers > span:hover {
 		background-color: rgba(0, 0, 0, 0.1);
 }
 
+div#placeHolder, div#reset {
+  display:inline;
+}
 div#placeHolder::before{
   content: "Filters: ";
   font-weight: bold;

@@ -28,8 +28,6 @@
 <li><a href="http://www.w3.org/participate/">Participate</a></li>
 <li><a href="http://www.w3.org/Consortium/membership">Membership</a></li>
 <li class="last-item"><a href="http://www.w3.org/Consortium/">About W3C</a></li>
-<li class="search-item">
-<div id="search-form"><input tabindex="3" class="text" name="q" title="Search"> <button id="search-submit" name="search-submit" type="submit"><img class="submit" src="https://www.w3.org/2008/site/images/search-button" alt="Search" width="21" height="17"></button></div></li>
 
 </ul>
 </form>
@@ -65,6 +63,7 @@
    <div class="hierarchy tMargin">
       <div class="container">
       	<div id="placeHolder"><ul class="ft-menu"></div>
+        <div id="reset" style="display: none;"><button>Reset filters</button></div>
         <!-- <div id="triggers"> -->
         	<!-- <strong>Search:</strong> -->
         	<!-- <span id="rec">Recommendation</span> -->
@@ -72,7 +71,7 @@
           <!-- <span id="html">HTML</span> -->
           <!-- <span id="javascript">JavaScript</span> -->
         <!-- </div> -->
-        <div id="legend"><i>Viewing all</i></div>
+        <div id="legend"><i>Viewing all specifications</i></div>
         <hr>
         <ul id="container">
                   <li data-tags="Javascript APIs" data-status="Proposed Edited Recommendation" data-versions="Latest">
@@ -16053,7 +16052,9 @@ $(function(){
     callback : function( query, match, mismatch ) {
             if ( !mismatch.length ) {
                 $("#legend").html("<i>Viewing all specifications</i>");
+                $("div#reset").hide();
             } else {
+                $("div#reset").show();
                 var category, tags, i, tag, legend = "<h4>Viewing:</h4>";
                 for ( category in query ) {
                     tags = query[category];
@@ -16087,6 +16088,10 @@ $(function(){
   // $("span#javascript").click(function() {
     // ft.trigger({ tags : ["Javascript APIs"] });
   // });
+
+  $("div#reset button").click(function() {
+    ft.reset();
+  });
 
   $("div#triggers > span").click(function() {
     $(this)
