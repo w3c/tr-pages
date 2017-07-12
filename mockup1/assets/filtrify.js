@@ -485,8 +485,8 @@
 				.each( this._bind( function( index, element ) {
 					var tag = ( element.textContent || element.innerText ),
 						count = this._fields[field][tag] === undefined ? 0 : this._fields[field][tag];
-
 					element.setAttribute("data-count", count );
+					$(element).toggle((count != 0));
 				}, this ) );
 		};
 	};
