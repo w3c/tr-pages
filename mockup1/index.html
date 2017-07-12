@@ -71,7 +71,7 @@
           <!-- <span id="html">HTML</span> -->
           <!-- <span id="javascript">JavaScript</span> -->
         <!-- </div> -->
-        <div id="legend"><i>Viewing all specifications</i></div>
+        <div id="legend"><i></i></div>
         <hr>
         <ul id="container">
                   <li data-tags="Javascript APIs" data-status="Proposed Edited Recommendation" data-versions="Latest">
@@ -16037,7 +16037,6 @@ $(function(){
     close : true,
     callback : function( query, match, mismatch ) {
             if ( !mismatch.length ) {
-                $("#legend").html("<i>Viewing all specifications</i>");
                 $("div#reset").hide();
             } else {
                 $("div#reset").show();
@@ -16075,16 +16074,34 @@ $(function(){
     // ft.trigger({ tags : ["Javascript APIs"] });
   // });
 
+  $("input#search").keyup(function(){
+    var val = $(this).val().toLowerCase();
+    if (val.length > 1) {
+      var list = $("ul#container > li(':not(.ft-hidden)')");
+      var c = list.length;
+      list.each(function() {
+          var text = $(this).children().first().text().toLowerCase();
+          if (text.indexOf(val) > -1) {
+            $(this).removeClass('ft-hidden ft-mismatch');
+          } else {
+            $(this).addClass('ft-hidden ft-mismatch');
+            c--;
+          }
+      });
+      ft.refresh();
+      $("div#reset").show();
+
+      $("#legend").html("<p><i>" + c + " specifications found.</i></p>");
+    } else {
+      $("ul#container > li").removeClass('ft-hidden ft-mismatch');
+      $("div#reset").hide();
+    }
+  });
+
   $("div#reset button").click(function() {
     ft.reset();
   });
 
-  $("div#triggers > span").click(function() {
-    $(this)
-      .addClass("selected")
-      .siblings("span")
-      .removeClass("selected");
-  });
 });
 </script>
 

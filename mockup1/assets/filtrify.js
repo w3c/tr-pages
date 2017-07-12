@@ -25,7 +25,7 @@
 
 		this._container = $( "#" + containerID );
 		this._holder = $( "#" + placeholderID );
-		this._items = this._container.children();
+		this._items = this._container.children().not('.ft-hidden');
 		this._matrix = [];
 		this._fields = {};
 		this._order = []; // helper to get the right field order
@@ -93,7 +93,7 @@
 		var f = 0, field,
 			browser = $.browser;
 
-		this._menu.list = $("<input type=text placeholder=Search id=search><ul class='ft-menu' />");
+		this._menu.list = $("<input type=text placeholder='Search (2 chars min.)' id=search><ul class='ft-menu' />");
 
 		for ( f; f < this._order.length; f++ ) {
 			field = browser.webkit || browser.opera ?
@@ -578,9 +578,36 @@
 	};
 
 	Filtrify.prototype.reset = function() {
-		this.trigger({});
+		$("input#search").val("");
+		$("#legend").html("<i></i>");
+		var f;
+		this._matrix = [];
+		this._items = this._container.children();
+		this.load();
+		for ( f in this._fields ) {
+			this.updateQueryField( f, {} );
+			this.updateActiveClass( f );
+			this.updatePanel( f );
+			this.toggleSelected( f );
+		};
+
+		this.filter();
 	};
 
+  Filtrify.prototype.refresh = function() {
+		var f;
+		this._matrix = [];
+		this._items = this._container.children().not('.ft-mismatch');
+		this.load();
+		for ( f in this._fields ) {
+			this.updateQueryField( f, this._query );
+			this.updateActiveClass( f );
+			this.updatePanel( f );
+			this.toggleSelected( f );
+		};
+
+		this.filter();
+	};
 
 	$.filtrify = function( containerID, placeholderID, options ) {
 		return new Filtrify( containerID, placeholderID, options );
