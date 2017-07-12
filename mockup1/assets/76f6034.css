@@ -515,3 +515,13 @@ p.deliverer, p.deliverer + p {
 p.deliverer {
   text-decoration: underline;
 }
+
+input#search {
+	border: 2px solid #CCC;
+	padding: 5px 9px;
+	margin: 5px;
+	border-radius:20px;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+    background: none !important;
+}
