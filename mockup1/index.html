@@ -63,16 +63,18 @@
     <div class="w3c_toc"><!-- --></div>            <div id="w3c_content_body">
    <div class="hierarchy tMargin">
       <div class="container">
-      	<div id="placeHolder"><ul class="ft-menu"></ul></div>
-        <div id="reset" style="display: none;"><button>Reset filters</button></div>
-        <!-- <div id="triggers"> -->
-        	<!-- <strong>Search:</strong> -->
-        	<!-- <span id="rec">Recommendation</span> -->
-        	<!-- <span id="pr">Proposed recommendation</span> -->
-          <!-- <span id="html">HTML</span> -->
-          <!-- <span id="javascript">JavaScript</span> -->
-        <!-- </div> -->
-        <div id="legend"><i></i></div>
+        <div id="filters">
+        	<div id="placeHolder"><ul class="ft-menu"></ul></div>
+          <div id="reset" style="display: none;"><button>Reset filters</button></div>
+          <!-- <div id="triggers"> -->
+          	<!-- <strong>Search:</strong> -->
+          	<!-- <span id="rec">Recommendation</span> -->
+          	<!-- <span id="pr">Proposed recommendation</span> -->
+            <!-- <span id="html">HTML</span> -->
+            <!-- <span id="javascript">JavaScript</span> -->
+          <!-- </div> -->
+          <div id="legend"><i></i></div>
+        </div>
         <ul id="container">
                   <li data-tags="Javascript APIs" data-status="Proposed Edited Recommendation" data-versions="Upcoming">
           <h2 class="ProposedEditedRecommendation"><a href="https://www.w3.org/TR/2016/PER-vibration-20160818/" title="Latest draft of Vibration API formally approved by the group">Vibration API</a></h2>
@@ -16031,6 +16033,15 @@ W3C <sup>®</sup> (<a href="http://www.csail.mit.edu/"><abbr title="Massachusett
 <script type="text/javascript" src="assets/39f9edc.js"></script>
 <script type="text/javascript" src="assets/filtrify.js"></script>
 <script type="text/javascript">
+
+var filters = $('#filters'),
+  filtersOffset = filters.offset().top;
+
+$(window).scroll(function () {
+    var scroll = $(window).scrollTop();
+    filters.toggleClass('stuck', scroll > filtersOffset);
+});
+
 $(function(){
   var ft = $.filtrify("container", "placeHolder", {
     close : true,
@@ -16102,7 +16113,7 @@ $(function(){
   });
 
 });
-</script>
 
+</script>
 
 </body></html>

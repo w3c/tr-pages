@@ -155,7 +155,7 @@ ul.ft-menu > li.ft-field > div.ft-panel > fieldset.ft-search:before {
 ul.ft-menu > li.ft-field > div.ft-panel > fieldset.ft-search > input {
 	outline: none;
 	display: block;
-	width: 90%; 
+	width: 90%;
 	padding: 4px 10px 4px 25px;
 	color: gray;
 	background: white;
@@ -320,9 +320,19 @@ div#triggers > span:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-div#placeHolder, div#reset {
-  display:inline;
+div#filters {
+	background-color: #ffffff;
 }
+
+@media (min-width: 768px) {
+	div#filters.stuck {
+		position: fixed;
+		top: 0;
+		left: 23%;
+		width: 75%;
+	}
+}
+
 div#placeHolder::before{
   content: "Filters: ";
   font-weight: bold;
@@ -383,11 +393,11 @@ h2.WorkingDraft, h2.Retired, h2.LastCall, h2.CandidateRecommendation, h2.Propose
 ul.taglist{margin: 5px 0 25px;}
 
 ul#container > li::before {
-    content: ""; 
+    content: "";
     display: block;
     width: 80%;
-    padding-top: 10px; 
-    border-top: 1px solid #d2cfcf; 
+    padding-top: 10px;
+    border-top: 1px solid #d2cfcf;
 }
 
 li.accessibility {background-color: #ede5f4}
@@ -448,7 +458,7 @@ li.provenance {background-color: #f0ffbb}
 li.qa {background-color: #f0fef0}
 li.rdb2rdf {background-color: #d0c5b1}
 li.rdf {background-color: #cdccfe}
-li.rdfbp {background-color: #f8c1af} 
+li.rdfbp {background-color: #f8c1af}
 li.rdfrel {background-color: #71c77a}
 li.rdfvocabs {background-color: #a0ffff}
 li.rdfa {background-color: #56aba2}
