@@ -321,15 +321,18 @@ div#triggers > span:hover {
 }
 
 div#filters {
+	width: 100%;
+	padding: .5rem 0;
 	background-color: #ffffff;
 }
 
 @media (min-width: 768px) {
-	div#filters.stuck {
+	#filters.stuck {
 		position: fixed;
 		top: 0;
-		left: 23%;
-		width: 75%;
+		left: 22.5%;
+		width: 72%;
+		box-shadow: 0 1rem 2rem -1rem #808080;
 	}
 }
 
