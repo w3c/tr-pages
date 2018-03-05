@@ -1,5 +1,52 @@
 /* icons font-face */
 
+html.js form#filters input[type="submit"] {
+	display: none;
+}
+
+#spinner {
+	float: right;
+	width: 4rem;
+	height: 4rem;
+	margin-right: 1rem;
+	opacity: 0;
+}
+
+#spinner,
+ul#container li {
+	transition: opacity 1s linear;
+}
+
+#filters {
+	margin-top: .5rem;
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+}
+
+#filters fieldset {
+	margin: 0 1rem 1rem 0;
+}
+
+#filters input[type='reset'],
+#filters input[type='submit'] {
+	margin: 0 1rem 0 0;
+}
+
+#filters input:not([type='reset']):not([type='submit']),
+#filters select {
+	padding: .125rem .5rem;
+}
+
+#filters input[type='reset'],
+#filters input[type='submit'] {
+	padding: .25rem 1rem;
+}
+
+#filters fieldset.buttons {
+	flex-grow: 1;
+	text-align: right;
+}
 
 /* reset */
 ul.ft-menu,
@@ -546,40 +593,40 @@ ul#container{
 /* Smartphones & tablets */
 
 @media all and (max-width: 920px) {
-  ul#container > li{ 
+  ul#container > li{
     width: 45%;
     padding-left: 3%;
     font-size: 90%;
     margin: 0 auto;}
-    
+
   h3.category .ribbon{
     font-size: 90%;
     }
-    
+
   .w3c_leftCol, h1.logo{
       min-width: 150px;
     }
-    
+
   .title{
       padding: 15px;
     }
-    
+
   .bct{
       padding: 10px 5px;
     }
-    
+
   .main_nav{
       padding: 7px 5px;
     }
-  
+
   .w3c_sec_nav{
       padding: 3px 0px;
     }
-    
+
   #w3c_nav{
       padding-bottom: 10px;
     }
-    
+
     .Retired::after, .LastCall::after, .WorkingDraft::after, .CandidateRecommendation::after, .ProposedRecommendation::after, .Recommendation::after, .GroupNote::after, .ProposedEditedRecommendation::after, .ObsoleteRec::after {
       margin-left: 15px;
       background-color: #036;
@@ -592,12 +639,12 @@ ul#container{
       vertical-align: middle;
       font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
-    
+
     h2.WorkingDraft, h2.Retired, h2.LastCall, h2.CandidateRecommendation, h2.ProposedRecommendation, h2.Recommendation, h2.GroupNote, h2.ProposedEditedRecommendation, h2.ObsoleteRec {
       font-size: 135%;
       padding-bottom: 3px;
     }
-    
+
     ul.ft-menu > li.ft-field > div.ft-panel > fieldset.ft-search > input {
         width:80%;
     }
@@ -605,7 +652,7 @@ ul#container{
     ul.ft-menu > li.ft-field > div.ft-panel{
         min-width: 180px;
         left:105%;
-    } 
+    }
 }
 
 /* Smartphones only */
@@ -618,16 +665,16 @@ ul#container{
     ul ul, ol ol {
       padding: 0px 3px;
 }
-    
+
     #placeHolder{
       font-size: 90%;
       padding: 0 15px;
     }
-    
+
     .tMargin{
       margin-top: 0 !important;
     }
-    
+
     #w3c_mast h1{
       width: 100%;
     }
