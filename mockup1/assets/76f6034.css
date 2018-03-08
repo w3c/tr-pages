@@ -266,8 +266,8 @@ ul.ft-menu > li.ft-field {
 }
 
 ul#container > li {
-  display: inline-block;
-width: 49%;
+display: inline-block;
+width: 18em;
 vertical-align: top;
 }
 
@@ -533,6 +533,7 @@ li.xslt {background-color: #5da29b}
 
 ul#container{
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
 }
 
@@ -540,8 +541,8 @@ ul#container{
 
 @media all and (max-width: 768px) {
   ul#container > li{ 
-    min-width: 80%;
-    padding-left: 10%;
+    width: 45%;
+    padding-left: 3%;
     font-size: 90%;
     margin: 0 auto;}
     
@@ -602,7 +603,7 @@ ul#container{
 }
 
 /* Smartphones only */
-@media all and (max-width: 480px) {
+@media all and (max-width: 520px) {
 
     ul.editorlist {
       padding-left: 5px;
