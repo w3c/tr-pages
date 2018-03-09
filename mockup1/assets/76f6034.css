@@ -266,8 +266,8 @@ ul.ft-menu > li.ft-field {
 }
 
 ul#container > li {
-  display: inline-block;
-width: 49%;
+display: inline-block;
+width: 23em;
 vertical-align: top;
 }
 
@@ -350,9 +350,10 @@ div#placeHolder > ul {
   background-color: #036;
   color: white;
   font-size: 12px;
-  padding: 5px 15px;
+  font-weight: 600;
+  padding: 4px 15px;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.2em;
   cursor: pointer;
   vertical-align: middle;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -391,7 +392,11 @@ input#search {
 
 /* == Cosmetic enhancements == */
 
-h2.WorkingDraft, h2.Retired, h2.LastCall, h2.CandidateRecommendation, h2.ProposedRecommendation, h2.Recommendation, h2.GroupNote, h2.ProposedEditedRecommendation, h2.ObsoleteRec{font-size: 150%;}
+h2.WorkingDraft, h2.Retired, h2.LastCall, h2.CandidateRecommendation, h2.ProposedRecommendation, h2.Recommendation, h2.GroupNote, h2.ProposedEditedRecommendation, h2.ObsoleteRec{
+    font-size: 150%;
+    line-height: 1.1em;
+    margin-bottom: 0.6em;
+}
 
 ul.taglist{margin: 5px 0 25px;}
 
@@ -528,3 +533,102 @@ li.xpointer {background-color: #faacdd}
 li.xquery {background-color: #6fc88d}
 li.xsl {background-color: #f4c96f}
 li.xslt {background-color: #5da29b}
+
+/* == RWD == */
+
+ul#container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Smartphones & tablets */
+
+@media all and (max-width: 920px) {
+  ul#container > li{ 
+    width: 45%;
+    padding-left: 3%;
+    font-size: 90%;
+    margin: 0 auto;}
+    
+  h3.category .ribbon{
+    font-size: 90%;
+    }
+    
+  .w3c_leftCol, h1.logo{
+      min-width: 150px;
+    }
+    
+  .title{
+      padding: 15px;
+    }
+    
+  .bct{
+      padding: 10px 5px;
+    }
+    
+  .main_nav{
+      padding: 7px 5px;
+    }
+  
+  .w3c_sec_nav{
+      padding: 3px 0px;
+    }
+    
+  #w3c_nav{
+      padding-bottom: 10px;
+    }
+    
+    .Retired::after, .LastCall::after, .WorkingDraft::after, .CandidateRecommendation::after, .ProposedRecommendation::after, .Recommendation::after, .GroupNote::after, .ProposedEditedRecommendation::after, .ObsoleteRec::after {
+      margin-left: 15px;
+      background-color: #036;
+      color: white;
+      font-size: 9px;
+      padding: 4px 15px;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      cursor: pointer;
+      vertical-align: middle;
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+    
+    h2.WorkingDraft, h2.Retired, h2.LastCall, h2.CandidateRecommendation, h2.ProposedRecommendation, h2.Recommendation, h2.GroupNote, h2.ProposedEditedRecommendation, h2.ObsoleteRec {
+      font-size: 135%;
+      padding-bottom: 3px;
+    }
+    
+    ul.ft-menu > li.ft-field > div.ft-panel > fieldset.ft-search > input {
+        width:80%;
+    }
+
+    ul.ft-menu > li.ft-field > div.ft-panel{
+        min-width: 180px;
+        left:105%;
+    } 
+}
+
+/* Smartphones only */
+@media all and (max-width: 520px) {
+
+    ul.editorlist {
+      padding-left: 5px;
+}
+
+    ul ul, ol ol {
+      padding: 0px 3px;
+}
+    
+    #placeHolder{
+      font-size: 90%;
+      padding: 0 15px;
+    }
+    
+    .tMargin{
+      margin-top: 0 !important;
+    }
+    
+    #w3c_mast h1{
+      width: 100%;
+    }
+}
