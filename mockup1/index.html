@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
 <title>All Standards and Drafts - W3C</title>
 <link rel="Help" href="http://www.w3.org/Help/">
@@ -9,7 +9,7 @@
 @import url("//www.w3.org/2008/site/css/advanced");
 /*]]>*/
 </style>
-<link href="assets/minimum.css" rel="stylesheet" media="only screen and (max-width: 520px)">
+<link href="//www.w3.org/2008/site/css/minimum" rel="stylesheet" media="only screen and (max-width: 520px)">
 <link rel="stylesheet" href="//www.w3.org/2008/site/css/print.css" media="print">
 <link rel="stylesheet" href="assets/76f6034.css">
 <link rel="shortcut icon" href="//www.w3.org/2008/site/images/favicon.ico" type="image/x-icon">
@@ -63,20 +63,74 @@
     <div class="w3c_toc"><!-- --></div>            <div id="w3c_content_body">
    <div class="hierarchy tMargin">
       <div class="container">
-        <div id="filters">
-        	<div id="placeHolder"><ul class="ft-menu"></ul></div>
-          <div id="reset" style="display: none;"><button>Reset filters</button></div>
-          <!-- <div id="triggers"> -->
-          	<!-- <strong>Search:</strong> -->
-          	<!-- <span id="rec">Recommendation</span> -->
-          	<!-- <span id="pr">Proposed recommendation</span> -->
-            <!-- <span id="html">HTML</span> -->
-            <!-- <span id="javascript">JavaScript</span> -->
-          <!-- </div> -->
-          <div id="legend"><i></i></div>
+        <div id="spinner">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0"
+            width="64px" height="64px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+            <path fill="#000000" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z">
+              <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.5s" repeatCount="indefinite" />
+            </path>
+          </svg>
         </div>
+        <h2 id="summary">4 specs (no filters)</h2>
+        <form id="filters" method="get" action="#">
+          <fieldset>
+            <label for="title">Title</label>
+            <input id="title" name="title" type="text" autofocus />
+          </fieldset>
+          <fieldset>
+            <label for="tag">Tag</label>
+            <select id="tag" name="tag">
+              <option value="" selected="selected"></option>
+              <option value="a11y">Accessibility</option>
+              <option value="browser">Browser</option>
+              <option value="css"><abbr title="Cascading Style Sheets">CSS</abbr></option>
+              <option value="data">Data</option>
+              <option value="dom"><abbr title="Document Object Model">DOM</abbr></option>
+              <option value="graphics">Graphics</option>
+              <option value="html"><abbr title="Hypertext Markup Language">HTML</abbr></option>
+              <option value="http"><abbr title="Hypertext Transport Protocol">HTTP</abbr></option>
+              <option value="i18n">Internationalisation</option>
+              <option value="media">Media</option>
+              <option value="performance">Performance</option>
+              <option value="privacy">Privacy</option>
+              <option value="protocol">Protocol</option>
+              <option value="security">Security</option>
+              <option value="web">Web</option>
+              <option value="wot"><abbr title="Web of things">WoT</abbr></option>
+              <option value="xml"><abbr title="Extensible markup language">XML</abbr></option>
+            </select>
+          </fieldset>
+          <fieldset>
+            <label for="status">Status</label>
+            <select id="status" name="status">
+              <option value="" selected="selected"></option>
+              <option value="cr">Candidate recommendation</option>
+              <option value="gn">Group note</option>
+              <option value="lc">Last call</option>
+              <option value="or">Obsoleted recommendation</option>
+              <option value="per">Proposed edited recommendation</option>
+              <option value="pr">Proposed recommendation</option>
+              <option value="rec">Recommendation</option>
+              <option value="ret">Retired</option>
+              <option value="wd">Working draft</option>
+            </select>
+          </fieldset>
+          <fieldset>
+            <label for="version">Version</label>
+            <select id="version" name="version">
+              <option value="" selected="selected"></option>
+              <option value="latest">Latest</option>
+              <option value="upcoming">Upcoming</option>
+              <option value="ed">Editor's drafts</option>
+            </select>
+          </fieldset>
+          <fieldset class="buttons">
+            <input id="reset" type="reset" value="Reset" />
+            <input id="submit" type="submit" value="Filter" />
+          </fieldset>
+        </form>
         <ul id="container">
-                  <li data-tags="Javascript APIs" data-status="Proposed Edited Recommendation" data-versions="Upcoming">
+                  <li data-tag="browser" data-status="per" data-version="upcoming" data-title="vibration api">
           <h2 class="ProposedEditedRecommendation"><a href="https://www.w3.org/TR/2016/PER-vibration-20160818/" title="Latest draft of Vibration API formally approved by the group">Vibration API</a></h2>
          <p class=deliverer>Device and Sensors Working Group</p>
           <p>Published on 2016-08-18 - <a title="Vibration API publication history" href="http://www.w3.org/standards/history/vibration">History</a><br>
@@ -90,7 +144,7 @@
           </li>
 
 
-                  <li data-tags="Web Applications Manifest Formats" data-status="Working Draft" data-versions="Upcoming">
+                  <li data-tag="data" data-status="wd" data-version="upcoming" data-title="web applications manifest formats">
           <h2 class="WorkingDraft"><a href="https://www.w3.org/TR/2016/WD-appmanifest-20160718/" title="Latest draft of Web App Manifest formally approved by the group">Web App Manifest</a></h2>
          <p class=deliverer>Web Platform Working Group</p>
           <p>Published on 2016-07-18 - <a title="Web App Manifest publication history" href="http://www.w3.org/standards/history/appmanifest">History</a><br>
@@ -100,7 +154,7 @@
           </li>
 
 
-                  <li data-tags="Security for Web Applications" data-status="Recommendation" data-versions="Upcoming">
+                  <li data-tag="security" data-status="rec" data-version="upcoming" data-title="subresource integrity">
           <h2 class="Recommendation"><a href="http://www.w3.org/TR/2016/REC-SRI-20160623/" title="Latest draft of Subresource Integrity formally approved by the group">Subresource Integrity</a></h2>
          <p class=deliverer>Web Application Security Working Group</p>
           <p>Published on 2016-06-23 - <a title="Subresource Integrity publication history" href="http://www.w3.org/standards/history/SRI">History</a><br>
@@ -117,7 +171,7 @@
           </li>
 
 
-                  <li data-tags="Javascript APIs, Web Performance" data-status="Working Draft" data-versions="Upcoming">
+                  <li data-tag="performance" data-status="wd" data-version="upcoming" data-title="page visibility 2">
           <h2 class="WorkingDraft"><a href="http://www.w3.org/TR/2016/WD-page-visibility-2-20160623/" title="Latest draft of Page Visibility 2 formally approved by the group">Page Visibility 2</a></h2>
          <p class=deliverer>Web Performance Working Group</p>
           <p>Published on 2016-06-23 - <a title="Page Visibility 2 publication history" href="http://www.w3.org/standards/history/page-visibility-2">History</a><br>
@@ -16030,102 +16084,5 @@ W3C <sup>®</sup> (<a href="http://www.csail.mit.edu/"><abbr title="Massachusett
 </div>
 </div>
 <div id="w3c_scripts"><script type="text/javascript" src="https://www.w3.org/2008/site/js/main"></script></div>
-<script type="text/javascript" src="assets/39f9edc.js"></script>
-<script type="text/javascript" src="assets/filtrify.js"></script>
-<script type="text/javascript">
-
-var filters = $('#filters'),
-  content = $('#container')[0],
-  filtersOffset = filters.offset().top,
-  filtersHeight = filters.outerHeight();
-
-var updateFiltersHeight = function() {
-  filtersHeight = filters.outerHeight();
-};
-
-$(window).resize(updateFiltersHeight);
-
-$(window).scroll(function () {
-  var scroll = $(window).scrollTop();
-  filters.toggleClass('stuck', scroll > filtersOffset);
-  content.style.marginTop = (scroll > filtersOffset ? (filtersHeight + 16) : 0) + 'px';
-});
-
-$(function(){
-  var ft = $.filtrify("container", "placeHolder", {
-    close : true,
-    callback : function( query, match, mismatch ) {
-            if ( !mismatch.length ) {
-                $("div#reset").hide();
-            } else {
-                $("div#reset").show();
-                var category, tags, i, tag, legend = "<h4>Viewing:</h4>";
-                for ( category in query ) {
-                    tags = query[category];
-                    if ( tags.length ) {
-                        legend += "<p><span>" + category + ":</span>";
-                        for ( i = 0; i < tags.length; i++ ) {
-                            tag = tags[i];
-                            legend += "<em>" + tag + "</em>";
-                        };
-                        legend += "</p>";
-                    };
-                };
-                legend += "<p><i>" + match.length + " specification" + (match.length !== 1 ? "s" : "") + " found.</i></p>";
-                $("#legend").html( legend );
-            };
-            updateFiltersHeight();
-        }
-  });
-
-  // $("span#rec").click(function() {
-    // ft.trigger({ status : ["Recommendation"] });
-  // });
-//
-  // $("span#pr").click(function() {
-    // ft.trigger({ status : ["Proposed Recommendation"] });
-  // });
-//
-  // $("span#html").click(function() {
-    // ft.trigger({ tags : ["HTML"] });
-  // });
-//
-  // $("span#javascript").click(function() {
-    // ft.trigger({ tags : ["Javascript APIs"] });
-  // });
-
-  $("input#search").keyup(function(){
-    var val = $(this).val().toLowerCase();
-    if (val.length > 1) {
-      var list = $("ul#container > li(':not(.ft-hidden)')");
-      var c = list.length;
-      list.each(function() {
-          var text = $(this).children().first().text().toLowerCase();
-          if (text.indexOf(val) > -1) {
-            $(this).removeClass('ft-hidden ft-mismatch');
-          } else {
-            $(this).addClass('ft-hidden ft-mismatch');
-            c--;
-          }
-      });
-      ft.refresh();
-      $("div#reset").show();
-
-      $("#legend").html("<p><i>" + c + " specifications found.</i></p>");
-    } else {
-      $("ul#container > li").removeClass('ft-hidden ft-mismatch');
-      $("div#reset").hide();
-    }
-    updateFiltersHeight();
-  });
-
-  $("div#reset button").click(function() {
-    ft.reset();
-    updateFiltersHeight();
-  });
-
-});
-
-</script>
-
+<script src="assets/filtering.js"></script>
 </body></html>
