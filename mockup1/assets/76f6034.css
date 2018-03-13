@@ -20,7 +20,7 @@ ul#container li {
 @media (min-width: 768px) {
 	#filters.stuck {
 		position: fixed;
-		z-inder: 100;
+		z-index: 100;
 		top: 0;
 		left: 22.5%;
 		width: 75.5%;
