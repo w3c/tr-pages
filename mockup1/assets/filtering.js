@@ -67,6 +67,7 @@
         off.forEach((i) => {
           i.style.display = 'none';
         });
+        TOGGLE_STICKY();
       }, EFFECT_DELAY);
     }
     on = document.querySelectorAll(qsOn);
@@ -86,7 +87,7 @@
 
   const DEBOUNCED_FILTER = DEBOUNCE(FILTER, FILTER_DELAY);
 
-  let filters, summary, spinner, ticker;
+  let filters, summary, spinner, ticker, list, filtersOffset;
 
   const APPLY = (e) => {
     summary.innerHTML = 'Filtering&hellip;';
@@ -133,12 +134,24 @@
       FILTER();
   };
 
+  const TOGGLE_STICKY= () => {
+    if (window.scrollY > filtersOffset) {
+      filters.classList.add('stuck');
+      list.style.marginTop = (filters.clientHeight + 16) + 'px';
+    } else {
+      filters.classList.remove('stuck');
+      list.style.marginTop = 0;
+    }
+  };
+
   const INIT = () => {
+    window.removeEventListener('load', INIT);
     const HTML_CLASSES = document.firstElementChild.classList;
     filters = document.forms.filters;
     summary = document.getElementById('summary');
     spinner = document.getElementById('spinner');
-    window.removeEventListener('load', INIT);
+    list = document.getElementById('container');
+    filtersOffset = filters.offsetTop;
     HTML_CLASSES.remove('no-js');
     HTML_CLASSES.add('js');
     PROCESS_PARAMS(true);
@@ -149,6 +162,8 @@
     filters.addEventListener('reset', APPLY);
     filters.addEventListener('submit', IGNORE_EVENT);
     window.addEventListener('popstate', APPLY);
+    window.addEventListener('resize', TOGGLE_STICKY);
+    window.addEventListener('scroll', TOGGLE_STICKY);
   };
 
   window.addEventListener('load', INIT);
