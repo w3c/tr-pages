@@ -1,6 +1,6 @@
 # W3C TR Pages Project
 
-The purpose of this project is to propose and improve the the "latest versions" link headers in W3C specifications, 
+The purpose of this project is to propose and improve the "latest versions" link headers in W3C specifications, 
 and maintain and improve the style sheets for the future [TR page](https://www.w3.org/TR/) at the [W3C](http://www.w3.org/).
 
 ## Contributing
