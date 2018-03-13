@@ -32,6 +32,7 @@
       on,
       off;
     if (previousState) {
+      const ALL = {title: true, tag: true, status: true, version: true};
       for (let i of previousState) {
         if ('title' === i.key)
           selectors.push('[data-title*="' + i.value + '"]');
@@ -39,9 +40,11 @@
           selectors.push('[data-' + i.key + '~="' + i.value + '"]');
         if (filters.hasOwnProperty(i.key))
           filters[i.key].value = i.value;
-        else
-          filters[i.key].value = undefined;
+        delete ALL[i.key];
       }
+      for (let i in ALL)
+        if (filters.hasOwnProperty(i))
+          filters[i].value = undefined;
     } else {
       if (filters.title.value)
         selectors.push('[data-title*="' + filters.title.value.toLowerCase() + '"]');
