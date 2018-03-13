@@ -29,7 +29,7 @@ ul#container li {
 }
 
 #filters fieldset {
-	margin: 0 1rem 1rem 0;
+	margin: .5rem;
 }
 
 #filters input[type='reset'],
