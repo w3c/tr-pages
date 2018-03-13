@@ -44,7 +44,7 @@
       }
       for (let i in ALL)
         if (filters.hasOwnProperty(i))
-          filters[i].value = undefined;
+          filters[i].value = '';
     } else {
       if (filters.title.value)
         selectors.push('[data-title*="' + filters.title.value.toLowerCase() + '"]');
@@ -92,7 +92,7 @@
   const APPLY = (e) => {
     summary.innerHTML = 'Filtering&hellip;';
     spinner.style.opacity = 1;
-    DEBOUNCED_FILTER((e && 'popstate' === e.type && e.state) ? e.state : null);
+    DEBOUNCED_FILTER((e && 'popstate' === e.type) ? (e.state ? e.state : []) : null);
   };
 
   const IGNORE_EVENT = (e) => {
