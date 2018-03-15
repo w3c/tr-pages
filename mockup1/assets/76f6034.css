@@ -42,7 +42,8 @@ ul#container li {
 }
 
 #filters input[type='reset'],
-#filters input[type='submit'] {
+#filters input[type='submit'],
+#filters a {
 	margin: 0 1rem 0 0;
 }
 
@@ -56,8 +57,12 @@ ul#container li {
 	padding: .25rem .5rem;
 }
 
+#filters fieldset.help,
 #filters fieldset.buttons {
 	flex-grow: 1;
+}
+
+#filters fieldset.buttons {
 	text-align: right;
 }
 
@@ -581,8 +586,33 @@ li. {background-color: #5da29b}
 */
 
 a.trhelp {
-  border-bottom-style: none;
-  color: black;
+	border: 0 solid #c6d4e0;
+	border-radius: .75rem;
+	padding: .25rem .5rem;
+	color: black;
+	background-color: #ebf0f4;
+	transition: background-color .25s linear;
+}
+
+a.trhelp:hover,
+a.trhelp:active,
+a.trhelp:focus {
+	background-color: #c6d4e0;
+}
+
+a.trhelp span {
+	display: none;
+}
+
+a.trhelp:hover span,
+a.trhelp:active span,
+a.trhelp:focus span {
+	display: block;
+	position: absolute;
+	border: 1px solid #c6d4e0;
+	padding: .125rem .5rem;
+	background-color: #ffffff;
+	color: #000000;
 }
 
 /* == RWD == */
