@@ -61,7 +61,7 @@
       off = document.querySelectorAll(qsOff);
       off.forEach((i) => {
         i.style.opacity = 0;
-        i.attributes['aria-hidden'] = true;
+        i.setAttribute('aria-hidden', 'true');
       });
       setTimeout(() => {
         off.forEach((i) => {
