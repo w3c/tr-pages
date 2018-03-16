@@ -389,15 +389,6 @@ div#triggers > span:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-div#placeHolder::before{
-  content: "Filters: ";
-  font-weight: bold;
-}
-
-div#placeHolder > ul {
-  display: inline-block;
-}
-
 .Retired::after,.LastCall::after,.WorkingDraft::after,.CandidateRecommendation::after,.ProposedRecommendation::after,.Recommendation::after,.GroupNote::after,.ProposedEditedRecommendation::after, .ObsoleteRec::after {
   margin-left: 15px;
   background-color: #036;
@@ -700,11 +691,6 @@ ul#container{
     ul ul, ol ol {
       padding: 0px 3px;
 }
-
-    #placeHolder{
-      font-size: 90%;
-      padding: 0 15px;
-    }
 
     .tMargin{
       margin-top: 0 !important;
