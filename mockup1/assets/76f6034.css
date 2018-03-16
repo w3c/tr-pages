@@ -665,17 +665,8 @@ ul#container{
     }
 
     .Retired::after, .LastCall::after, .WorkingDraft::after, .CandidateRecommendation::after, .ProposedRecommendation::after, .Recommendation::after, .GroupNote::after, .ProposedEditedRecommendation::after, .ObsoleteRec::after {
-      margin-left: 15px;
-      background-color: #036;
-      color: white;
       font-size: 9px;
-      padding: 4px 15px;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      cursor: pointer;
-      vertical-align: middle;
-      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-}
+		}
 
     h2.WorkingDraft, h2.Retired, h2.LastCall, h2.CandidateRecommendation, h2.ProposedRecommendation, h2.Recommendation, h2.GroupNote, h2.ProposedEditedRecommendation, h2.ObsoleteRec {
       font-size: 135%;
