@@ -29,7 +29,7 @@ ul#container li {
 @media (min-width: 768px) {
 	#filters.stuck {
 		position: fixed;
-		z-inder: 100;
+		z-index: 100;
 		top: 0;
 		left: 22.5%;
 		width: 75.5%;
@@ -38,7 +38,7 @@ ul#container li {
 }
 
 #filters fieldset {
-	margin: 0 1rem 1rem 0;
+	margin: .5rem;
 }
 
 #filters input[type='reset'],
@@ -75,8 +75,8 @@ ul.ft-menu * {
 	line-height: 1;
 	position: relative;
 	text-align: left;
-    font: normal normal 100% sans-serif;
-    text-transform: capitalize;
+	font: normal normal 100% sans-serif;
+	text-transform: capitalize;
 }
 
 
@@ -330,14 +330,33 @@ ul.ft-menu > li.ft-field {
   margin: 5px;
 }
 
+#container h2 {
+  margin: 0 0 .6em 0;
+  padding: 0;
+  line-height: 1;
+}
+
 ul#container > li {
-display: inline-block;
-width: 23em;
-vertical-align: top;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 50%;
+  min-width: 14em;
+  max-width: 24em;
+  margin: 1em auto 0 auto;
+  border-style: solid;
+  border-color: #d2cfcf;
+  border-width: 1px 0 0 0;
+  padding: .5em 1em;
+  vertical-align: top;
+}
+
+ul#container > li > p,
+ul#container > li > ul {
+	padding: 0;
 }
 
 ul#container > li > p {
-  margin-bottom: 0;
+  margin-bottom: .2em;
 }
 
 ul.taglist li{
@@ -348,9 +367,8 @@ ul.taglist li{
   line-height: 10px;
   padding: 4px 9px;
   margin: 2px;
-  cursor: pointer;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
+
 ul.editorlist {
   padding-left:20px;
 }
@@ -386,38 +404,15 @@ div#triggers > span:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-div#placeHolder::before{
-  content: "Filters: ";
-  font-weight: bold;
-}
-
-div#placeHolder > ul {
-  display: inline-block;
-}
-
-.Retired::after,.LastCall::after,.WorkingDraft::after,.CandidateRecommendation::after,.ProposedRecommendation::after,.Recommendation::after,.GroupNote::after,.ProposedEditedRecommendation::after, .ObsoleteRec::after {
+.profile {
+  float: right;
   margin-left: 15px;
   background-color: #036;
   color: white;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 600;
-  padding: 4px 15px;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  cursor: pointer;
-  vertical-align: middle;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  padding: 4px 8px;
 }
-
-.Retired::after {content: "\52\65\74\69\72\65\64";}
-.LastCall::after {content: "\4C\43";}
-.WorkingDraft::after {content: "\57\44";}
-.CandidateRecommendation::after {content: "\43\52";}
-.ProposedRecommendation::after {content: "\50\52";}
-.Recommendation::after {content: "\52\45\43";}
-.GroupNote::after {content: "\4E\6F\74\65";}
-.ProposedEditedRecommendation::after {content: "\50\45\52";}
-.ObsoleteRec::after {content: "\4F\42\53\4C";}
 
 div#legend > p > em {
   margin-right: 5px;
@@ -441,22 +436,6 @@ input#search {
 }
 
 /* == Cosmetic enhancements == */
-
-h2.WorkingDraft, h2.Retired, h2.LastCall, h2.CandidateRecommendation, h2.ProposedRecommendation, h2.Recommendation, h2.GroupNote, h2.ProposedEditedRecommendation, h2.ObsoleteRec{
-    font-size: 150%;
-    line-height: 1.1em;
-    margin-bottom: 0.6em;
-}
-
-ul.taglist{margin: 5px 0 25px;}
-
-ul#container > li::before {
-    content: "";
-    display: block;
-    width: 80%;
-    padding-top: 10px;
-    border-top: 1px solid #d2cfcf;
-}
 
 li.accessibility {background-color: #ede5f4}
 li.browser {background-color: #a8c5a9}
@@ -620,7 +599,7 @@ a.trhelp:focus span {
 
 /* == RWD == */
 
-ul#container{
+ul#container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -630,11 +609,11 @@ ul#container{
 /* Smartphones & tablets */
 
 @media all and (max-width: 920px) {
-  ul#container > li{
-    width: 45%;
-    padding-left: 3%;
-    font-size: 90%;
-    margin: 0 auto;}
+
+  ul#container > li {
+		min-width: 8em;
+    padding: .5em;
+	}
 
   h3.category .ribbon{
     font-size: 90%;
@@ -664,24 +643,6 @@ ul#container{
       padding-bottom: 10px;
     }
 
-    .Retired::after, .LastCall::after, .WorkingDraft::after, .CandidateRecommendation::after, .ProposedRecommendation::after, .Recommendation::after, .GroupNote::after, .ProposedEditedRecommendation::after, .ObsoleteRec::after {
-      margin-left: 15px;
-      background-color: #036;
-      color: white;
-      font-size: 9px;
-      padding: 4px 15px;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      cursor: pointer;
-      vertical-align: middle;
-      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-}
-
-    h2.WorkingDraft, h2.Retired, h2.LastCall, h2.CandidateRecommendation, h2.ProposedRecommendation, h2.Recommendation, h2.GroupNote, h2.ProposedEditedRecommendation, h2.ObsoleteRec {
-      font-size: 135%;
-      padding-bottom: 3px;
-    }
-
     ul.ft-menu > li.ft-field > div.ft-panel > fieldset.ft-search > input {
         width:80%;
     }
@@ -702,11 +663,6 @@ ul#container{
     ul ul, ol ol {
       padding: 0px 3px;
 }
-
-    #placeHolder{
-      font-size: 90%;
-      padding: 0 15px;
-    }
 
     .tMargin{
       margin-top: 0 !important;

@@ -137,7 +137,10 @@
   const TOGGLE_STICKY= () => {
     if (window.scrollY > filtersOffset) {
       filters.classList.add('stuck');
-      list.style.marginTop = (filters.clientHeight + 16) + 'px';
+      if (window.innerWidth >= 768)
+        list.style.marginTop = (filters.clientHeight + 16) + 'px';
+      else
+        list.style.marginTop = 0;
     } else {
       filters.classList.remove('stuck');
       list.style.marginTop = 0;
