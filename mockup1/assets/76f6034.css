@@ -60,8 +60,6 @@ ul#container li {
 @keyframes pulse {
 	0% { color: #036; }
 	50% { color: #ffffff; }
-	/*0% { background-color: transparent; }
-	50% { background-color: #eeeeee; }*/
 }
 
 #summary.busy {
