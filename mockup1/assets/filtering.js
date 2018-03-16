@@ -1,7 +1,7 @@
 {
   'use strict';
 
-  const FILTER_DELAY = 1000,
+  const FILTER_DELAY = 1500,
     EFFECT_DELAY = 1000,
     FILTER_TICKS = 200;
 
@@ -75,7 +75,7 @@
       summary.innerHTML = on.length + ' spec' + (1 === on.length ? '' : 's') + ' (of ' + (on.length + off.length) + ')';
     else
       summary.innerHTML = on.length + ' specs (no filters)';
-    spinner.style.opacity = 0;
+    summary.classList.remove('busy');
     on.forEach((i) => {
       i.removeAttribute('aria-hidden');
       i.style.display = 'inline-block';
@@ -87,11 +87,11 @@
 
   const DEBOUNCED_FILTER = DEBOUNCE(FILTER, FILTER_DELAY);
 
-  let filters, summary, spinner, ticker, list, filtersOffset;
+  let filters, summary, ticker, list, filtersOffset;
 
   const APPLY = (e) => {
     summary.innerHTML = 'Filtering&hellip;';
-    spinner.style.opacity = 1;
+    summary.classList.add('busy');
     DEBOUNCED_FILTER((e && 'popstate' === e.type) ? (e.state ? e.state : []) : null);
   };
 
@@ -149,7 +149,6 @@
     const HTML_CLASSES = document.firstElementChild.classList;
     filters = document.forms.filters;
     summary = document.getElementById('summary');
-    spinner = document.getElementById('spinner');
     list = document.getElementById('container');
     filtersOffset = filters.offsetTop;
     HTML_CLASSES.remove('no-js');

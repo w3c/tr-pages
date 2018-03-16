@@ -4,15 +4,6 @@ html.js form#filters input[type="submit"] {
 	display: none;
 }
 
-#spinner {
-	float: right;
-	width: 4rem;
-	height: 4rem;
-	margin-right: 1rem;
-	opacity: 0;
-}
-
-#spinner,
 ul#container li {
 	transition: opacity 1s linear;
 }
@@ -66,6 +57,20 @@ ul#container li {
 	text-align: right;
 }
 
+@keyframes pulse {
+	0% { color: #036; }
+	50% { color: #ffffff; }
+	/*0% { background-color: transparent; }
+	50% { background-color: #eeeeee; }*/
+}
+
+#summary.busy {
+	animation-name: pulse;
+	animation-duration: .5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
 /* reset */
 ul.ft-menu,
 ul.ft-menu * {
@@ -78,7 +83,6 @@ ul.ft-menu * {
     font: normal normal 100% sans-serif;
     text-transform: capitalize;
 }
-
 
 ul.ft-menu {
 	list-style: none;
