@@ -342,6 +342,7 @@ ul#container > li > p {
 
 ul.taglist li{
   display: inline-block;
+  position: static;
   color: black;
   font-size: 12px;
   line-height: 10px;
