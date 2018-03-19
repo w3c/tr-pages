@@ -348,19 +348,20 @@ ul.taglist li{
   color: black;
   font-size: 12px;
   line-height: 10px;
-  padding: 4px 9px;
-  margin: 2px;
+  padding: 4px 8px;
+  margin: 2px 0.5px;
   cursor: pointer;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 ul.editorlist {
+  margin-top: 4px;
   padding-left:20px;
+  line-height: 1.1;
 }
 ul.editorlist li {
   display: inline;
   color: black;
-  font-size: 12px;
-  line-height: 10px;
+  font-size: smaller;
 }
 ul.editorlist li:after {
   content: ", ";
@@ -401,13 +402,13 @@ div#placeHolder > ul {
   margin-left: 15px;
   background-color: #036;
   color: white;
-  font-size: 12px;
-  font-weight: 600;
-  padding: 4px 15px;
+  font-size: 0.7em;
+  padding: 3px 8px;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.1em;
   cursor: pointer;
-  vertical-align: middle;
+  vertical-align: 2px;
+  line-height: 1.3em;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
@@ -431,7 +432,12 @@ p.deliverer, p.deliverer + p {
 }
 
 p.deliverer {
-  text-decoration: underline;
+  color: #777;
+}
+
+p.pubdetails {
+  font-size: 0.9em;
+  margin: 1em 0;
 }
 
 input#search {
@@ -445,12 +451,11 @@ input#search {
 /* == Cosmetic enhancements == */
 
 h2.WorkingDraft, h2.Retired, h2.LastCall, h2.CandidateRecommendation, h2.ProposedRecommendation, h2.Recommendation, h2.GroupNote, h2.ProposedEditedRecommendation, h2.ObsoleteRec{
-    font-size: 150%;
-    line-height: 1.1em;
+    font-size: 125%;
     margin-bottom: 0.6em;
 }
 
-ul.taglist{margin: 5px 0 25px;}
+ul.taglist{margin: 0.5em 0 1.5em;}
 
 ul#container > li::before {
     content: "";
@@ -680,7 +685,7 @@ ul#container{
 }
 
     h2.WorkingDraft, h2.Retired, h2.LastCall, h2.CandidateRecommendation, h2.ProposedRecommendation, h2.Recommendation, h2.GroupNote, h2.ProposedEditedRecommendation, h2.ObsoleteRec {
-      font-size: 135%;
+      font-size: 125%;
       padding-bottom: 3px;
     }
 
