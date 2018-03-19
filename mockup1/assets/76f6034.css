@@ -341,14 +341,12 @@ ul.ft-menu > li.ft-field {
 ul#container > li {
   box-sizing: border-box;
   display: inline-block;
-  width: 50%;
-  min-width: 14em;
-  max-width: 24em;
+  width: 100%;
   margin: 1em auto 0 auto;
   border-style: solid;
   border-color: #d2cfcf;
   border-width: 1px 0 0 0;
-  padding: .5em 1em;
+  padding: 1em 1em 0 1em;
   vertical-align: top;
 }
 
@@ -615,14 +613,27 @@ ul#container {
     justify-content: center;
 }
 
+@media all and (min-width: 768px) {
+  ul#container > li {
+		width: 50%;
+	}
+}
+
+@media all and (min-width: 992px) {
+  ul#container > li {
+		width: 33%;
+	}
+}
+
+@media all and (min-width: 1200px) {
+  ul#container > li {
+		width: 25%;
+	}
+}
+
 /* Smartphones & tablets */
 
 @media all and (max-width: 920px) {
-
-  ul#container > li {
-		min-width: 8em;
-    padding: .5em;
-	}
 
   h3.category .ribbon{
     font-size: 90%;
