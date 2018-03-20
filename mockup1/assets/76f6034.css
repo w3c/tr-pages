@@ -343,6 +343,7 @@ ul#container > li {
   box-sizing: border-box;
   display: inline-block;
   width: 100%;
+  min-width: 20em;
   margin: 1em auto 0 auto;
   border-style: solid;
   border-color: #d2cfcf;
