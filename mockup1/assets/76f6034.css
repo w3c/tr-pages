@@ -336,6 +336,7 @@ ul.ft-menu > li.ft-field {
   margin: 0 0 .6em 0;
   padding: 0;
   line-height: 1;
+  overflow-wrap: break-word;
 }
 
 ul#container > li {
@@ -613,21 +614,15 @@ ul#container {
     justify-content: center;
 }
 
-@media all and (min-width: 768px) {
+@media all and (min-width: 992px) {
   ul#container > li {
 		width: 50%;
 	}
 }
 
-@media all and (min-width: 992px) {
-  ul#container > li {
-		width: 33%;
-	}
-}
-
 @media all and (min-width: 1200px) {
   ul#container > li {
-		width: 25%;
+		width: 33%;
 	}
 }
 
