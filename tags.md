@@ -3,7 +3,7 @@
 * Accessibility: All specifications aiming at making the Web accessible to people with disabilities
 * Browser: Specifications for Web browsers and other interactive user agents
 * CSS: How documents are presented on screens using CSS
-* Data: How to develop and provide data to facilitate better communication
+* Data: Specifications to facilitate the creation, exchange, and usage of semantically rich data on the Web
 * DOM: Specifications describing the Document Object Model (DOM)
 * Graphics: Specifications dealing with graphical content (image formats, web fonts, canvas, etc)
 * HTML: Defines the HyperText Markup Language (HTML) format and its extensions
