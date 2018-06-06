@@ -56,10 +56,14 @@
         selectors.push('[data-version~="' + filters.version.value + '"]');
     }
     qsOn = SELECTOR_PREFIX + selectors.join('');
-    if (selectors.length > 0) {
+    if (0 === selectors.length) {
+      qsOff = SELECTOR_PREFIX + '[data-status="ret"]';
+    } else {
       qsOff = selectors.map((i) => SELECTOR_PREFIX + ':not(' + i + ')').join(', ');
-      if (!filters.status.value || filters.status.value !== 'ret')
-        qsOff += ' ,' + SELECTOR_PREFIX + '[data-status="ret"]';
+      if ('ret' !== filters.status.value)
+        qsOff += ', ' + SELECTOR_PREFIX + '[data-status="ret"]';
+    }
+    if (qsOff) {
       off = document.querySelectorAll(qsOff);
       off.forEach((i) => {
         i.style.opacity = 0;
