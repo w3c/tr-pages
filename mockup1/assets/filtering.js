@@ -56,20 +56,24 @@
         selectors.push('[data-version~="' + filters.version.value + '"]');
     }
     qsOn = SELECTOR_PREFIX + selectors.join('');
-    if (selectors.length > 0) {
+    if (0 === selectors.length) {
+      qsOff = SELECTOR_PREFIX + '[data-status="ret"]';
+    } else {
       qsOff = selectors.map((i) => SELECTOR_PREFIX + ':not(' + i + ')').join(', ');
-      off = document.querySelectorAll(qsOff);
-      off.forEach((i) => {
-        i.style.opacity = 0;
-        i.setAttribute('aria-hidden', 'true');
-      });
-      setTimeout(() => {
-        off.forEach((i) => {
-          i.style.display = 'none';
-        });
-        TOGGLE_STICKY();
-      }, EFFECT_DELAY);
+      if ('ret' !== filters.status.value)
+        qsOff += ', ' + SELECTOR_PREFIX + '[data-status="ret"]';
     }
+    off = document.querySelectorAll(qsOff);
+    off.forEach((i) => {
+      i.style.opacity = 0;
+      i.setAttribute('aria-hidden', 'true');
+    });
+    setTimeout(() => {
+      off.forEach((i) => {
+        i.style.display = 'none';
+      });
+      TOGGLE_STICKY();
+    }, EFFECT_DELAY);
     on = document.querySelectorAll(qsOn);
     if (selectors.length > 0)
       summary.innerHTML = on.length + ' spec' + (1 === on.length ? '' : 's') + ' (of ' + (on.length + off.length) + ')';
