@@ -60,7 +60,6 @@
       qsOff = selectors.map((i) => SELECTOR_PREFIX + ':not(' + i + ')').join(', ');
       if (!filters.status.value || filters.status.value !== 'ret')
         qsOff += ' ,' + SELECTOR_PREFIX + '[data-status="ret"]';
-      console.log(qsOff);
       off = document.querySelectorAll(qsOff);
       off.forEach((i) => {
         i.style.opacity = 0;
