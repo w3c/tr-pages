@@ -63,19 +63,17 @@
       if ('ret' !== filters.status.value)
         qsOff += ', ' + SELECTOR_PREFIX + '[data-status="ret"]';
     }
-    if (qsOff) {
-      off = document.querySelectorAll(qsOff);
+    off = document.querySelectorAll(qsOff);
+    off.forEach((i) => {
+      i.style.opacity = 0;
+      i.setAttribute('aria-hidden', 'true');
+    });
+    setTimeout(() => {
       off.forEach((i) => {
-        i.style.opacity = 0;
-        i.setAttribute('aria-hidden', 'true');
+        i.style.display = 'none';
       });
-      setTimeout(() => {
-        off.forEach((i) => {
-          i.style.display = 'none';
-        });
-        TOGGLE_STICKY();
-      }, EFFECT_DELAY);
-    }
+      TOGGLE_STICKY();
+    }, EFFECT_DELAY);
     on = document.querySelectorAll(qsOn);
     if (selectors.length > 0)
       summary.innerHTML = on.length + ' spec' + (1 === on.length ? '' : 's') + ' (of ' + (on.length + off.length) + ')';
