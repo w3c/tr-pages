@@ -1,28 +1,8 @@
 {
   'use strict';
 
-  const FILTER_DELAY = 1500,
-    EFFECT_DELAY = 1000,
+  const EFFECT_DELAY = 1000,
     FILTER_TICKS = 200;
-
-  /**
-   * https://davidwalsh.name/javascript-debounce-function
-   */
-
-  const DEBOUNCE = function(func, wait, immediate) {
-    var timeout;
-    return function() {
-      var context = this, args = arguments;
-      var later = function() {
-        timeout = null;
-        if (!immediate) func.apply(context, args);
-      };
-      var callNow = immediate && !timeout;
-      clearTimeout(timeout);
-      timeout = setTimeout(later, wait);
-      if (callNow) func.apply(context, args);
-    };
-  };
 
   const FILTER = (previousState) => {
     const SELECTOR_PREFIX = '#container > *';
@@ -89,14 +69,12 @@
       PUSH_STATE();
   };
 
-  const DEBOUNCED_FILTER = DEBOUNCE(FILTER, FILTER_DELAY);
-
   let filters, summary, ticker, list, filtersOffset;
 
   const APPLY = (e) => {
     summary.innerHTML = 'Filtering&hellip;';
     summary.classList.add('busy');
-    DEBOUNCED_FILTER((e && 'popstate' === e.type) ? (e.state ? e.state : []) : null);
+    FILTER((e && 'popstate' === e.type) ? (e.state ? e.state : []) : null);
   };
 
   const IGNORE_EVENT = (e) => {
