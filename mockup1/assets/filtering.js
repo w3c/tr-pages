@@ -71,6 +71,10 @@
 
   let filters, summary, ticker, list, filtersOffset;
 
+  const RESET = () => {
+    setTimeout(APPLY, 50);
+  };
+
   const APPLY = (e) => {
     summary.innerHTML = 'Filtering&hellip;';
     summary.classList.add('busy');
@@ -143,7 +147,7 @@
     filters.tag.addEventListener('change', APPLY);
     filters.status.addEventListener('change', APPLY);
     filters.version.addEventListener('change', APPLY);
-    filters.addEventListener('reset', APPLY);
+    filters.addEventListener('reset', RESET);
     filters.addEventListener('submit', IGNORE_EVENT);
     window.addEventListener('popstate', APPLY);
     window.addEventListener('resize', TOGGLE_STICKY);
