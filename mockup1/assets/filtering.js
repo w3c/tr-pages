@@ -1,9 +1,6 @@
 {
   'use strict';
 
-  const EFFECT_DELAY = 1000,
-    FILTER_TICKS = 200;
-
   const FILTER = (previousState) => {
     const SELECTOR_PREFIX = '#container > *';
     let selectors = [],
@@ -48,12 +45,10 @@
       i.style.opacity = 0;
       i.setAttribute('aria-hidden', 'true');
     });
-    setTimeout(() => {
-      off.forEach((i) => {
-        i.style.display = 'none';
-      });
-      TOGGLE_STICKY();
-    }, EFFECT_DELAY);
+    off.forEach((i) => {
+      i.style.display = 'none';
+    });
+    TOGGLE_STICKY();
     on = document.querySelectorAll(qsOn);
     if (selectors.length > 0)
       summary.innerHTML = on.length + ' spec' + (1 === on.length ? '' : 's') + ' (of ' + (on.length + off.length) + ')';
