@@ -14,7 +14,7 @@
 * Privacy: Specifications aiming at improving support for user privacy on the Web
 * Protocol: Defining the different protocols used on the Web
 * Security: Provides technical and policy mechanisms to improve security and enable secure cross-site communications for applications on the Web
-* Web API: Specifications providing APIs to allow Web applications to access specific features or data
+* Browser API: Specifications providing APIs to allow Web applications to access specific features or data
 * WoT: Provides interoperability across Internet of Things (IoT) Platforms and application domains
 * XML: Specifications defining the Extensible Markup Language (XML) and its extensions
 
