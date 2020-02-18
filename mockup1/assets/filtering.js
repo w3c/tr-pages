@@ -32,41 +32,47 @@
         selectors.push('[data-tag~="' + filters.tag.value + '"]');
       if (filters.status.value)
         selectors.push('[data-status~="' + filters.status.value + '"]');
+      else
+        selectors.push(':not([data-status="ret"])');
       if (filters.version.value)
         selectors.push('[data-version~="' + filters.version.value + '"]');
     }
     qsOn = SELECTOR_PREFIX + selectors.join('');
-    if (0 === selectors.length) {
-      qsOff = SELECTOR_PREFIX + '[data-status="ret"]';
-    } else {
-      qsOff = selectors.map((i) => SELECTOR_PREFIX + ':not(' + i + ')').join(', ');
-      if ('ret' !== filters.status.value)
-        qsOff += ', ' + SELECTOR_PREFIX + '[data-status="ret"]';
-    }
-    off = document.querySelectorAll(qsOff);
-    off.forEach((i) => {
-      i.style.opacity = 0;
-      i.setAttribute('aria-hidden', 'true');
-    });
-    setTimeout(() => {
-      off.forEach((i) => {
-        i.style.display = 'none';
-      });
-      const total = document.querySelectorAll(SELECTOR_PREFIX);
-      const specs = document.querySelectorAll(SELECTOR_PREFIX + '[style*="display: inline-block"]');
-      if (selectors.length > 0)
-        summary.innerHTML = specs.length + ' spec' + (1 === specs.length ? '' : 's') + ' (of ' + (total.length) + ')';
-      else
-        summary.innerHTML = total.length + ' specs (no filters)';
-      summary.classList.remove('busy');
-      TOGGLE_STICKY();
-    }, EFFECT_DELAY);
+    qsOff = selectors.map((i) => {
+      return (i !== ':not([data-status="ret"])') ? SELECTOR_PREFIX + ':not(' + i + ')' : SELECTOR_PREFIX + '[data-status="ret"]';
+    }).join(', ');
+    if ('ret' !== filters.status.value)
+      qsOff += ', ' + SELECTOR_PREFIX + '[data-status="ret"]';
+
     on = document.querySelectorAll(qsOn);
     on.forEach((i) => {
       i.removeAttribute('aria-hidden');
       i.style.display = 'inline-block';
       i.style.opacity = 1;
     });
+
+    off = document.querySelectorAll(qsOff);
+    off.forEach((i) => {
+      i.style.opacity = 0;
+      i.setAttribute('aria-hidden', 'true');
+    });
+    const listElement = document.getElementById("container");
+    listElement.addEventListener("transitionend", ({ target }) => {
+      if (target.style.opacity === "0") {
+        target.style.display = "none";
+      }
+    });
+
+    const total = document.querySelectorAll(SELECTOR_PREFIX);
+    const specs = document.querySelectorAll(SELECTOR_PREFIX + '[style*="opacity: 1"]');
+    if (selectors.length > 0)
+      summary.innerHTML = specs.length + ' spec' + (1 === specs.length ? '' : 's') + ' (of ' + (total.length) + ')';
+    else
+      summary.innerHTML = total.length + ' specs (no filters)';
+    summary.classList.remove('busy');
+
+      TOGGLE_STICKY();
+
     if (!previousState)
       PUSH_STATE();
   };
