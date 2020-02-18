@@ -62,13 +62,10 @@
 
     const total = document.querySelectorAll(SELECTOR_PREFIX);
     const specs = document.querySelectorAll(SELECTOR_PREFIX + '[style*="opacity: 1"]');
-    if (selectors.length > 0)
-      summary.innerHTML = specs.length + ' spec' + (1 === specs.length ? '' : 's') + ' (of ' + (total.length) + ')';
-    else
-      summary.innerHTML = total.length + ' specs (no filters)';
+    summary.innerHTML = specs.length + ' specifications' + (1 === specs.length ? '' : 's') + ' (total of ' + total.length + ' specifications, including retired documents)';
     summary.classList.remove('busy');
 
-      TOGGLE_STICKY();
+    TOGGLE_STICKY();
 
     if (!previousState)
       PUSH_STATE();
