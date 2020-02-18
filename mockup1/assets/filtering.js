@@ -1,6 +1,9 @@
 {
   'use strict';
 
+  const EFFECT_DELAY = 1000,
+    FILTER_TICKS = 200;
+
   const FILTER = (previousState) => {
     const SELECTOR_PREFIX = '#container > *';
     let selectors = [],
@@ -45,16 +48,20 @@
       i.style.opacity = 0;
       i.setAttribute('aria-hidden', 'true');
     });
-    off.forEach((i) => {
-      i.style.display = 'none';
-    });
-    TOGGLE_STICKY();
+    setTimeout(() => {
+      off.forEach((i) => {
+        i.style.display = 'none';
+      });
+      const total = document.querySelectorAll(SELECTOR_PREFIX);
+      const specs = document.querySelectorAll(SELECTOR_PREFIX + '[style*="display: inline-block"]');
+      if (selectors.length > 0)
+        summary.innerHTML = specs.length + ' spec' + (1 === specs.length ? '' : 's') + ' (of ' + (total.length) + ')';
+      else
+        summary.innerHTML = total.length + ' specs (no filters)';
+      summary.classList.remove('busy');
+      TOGGLE_STICKY();
+    }, EFFECT_DELAY);
     on = document.querySelectorAll(qsOn);
-    if (selectors.length > 0)
-      summary.innerHTML = on.length + ' spec' + (1 === on.length ? '' : 's') + ' (of ' + (on.length + off.length) + ')';
-    else
-      summary.innerHTML = on.length + ' specs (no filters)';
-    summary.classList.remove('busy');
     on.forEach((i) => {
       i.removeAttribute('aria-hidden');
       i.style.display = 'inline-block';
