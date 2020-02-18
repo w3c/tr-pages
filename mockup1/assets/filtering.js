@@ -1,9 +1,6 @@
 {
   'use strict';
 
-  const EFFECT_DELAY = 1000,
-    FILTER_TICKS = 200;
-
   const FILTER = (previousState) => {
     const SELECTOR_PREFIX = '#container > *';
     let selectors = [],
