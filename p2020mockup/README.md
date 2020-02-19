@@ -3,12 +3,11 @@ These are mockup versions of W3C Document for Process 2020.
 * [Candidate Recommendation 6.2.7](https://htmlpreview.github.io/?https://github.com/w3c/tr-pages/blob/master/p2020mockup/cr-6.2.7.html)
   1. Does not make assumption about moving Proposed Recommendation
 * [Candidate Recommendation Snapshot 6.2.8.1](https://htmlpreview.github.io/?https://github.com/w3c/tr-pages/blob/master/p2020mockup/cr-6.2.8.1.html)
-  * No change from 2019 pubrules
-* [Candidate Recommendation Update Draft 6.2.8.2](https://htmlpreview.github.io/?https://github.com/w3c/tr-pages/blob/master/p2020mockup/cr-6.2.8.2.html)
   1. "Snapshot" appears under the status sub-title
   1. SOTD talks about "Snapshot of a Candidate Recommendation"
-  1. "document has received wide review and to encourage early implementation by the developer community."
+  1. "to indicate that the document has received wide review and to encourage early implementation by the developer community."
   1. Does not make assumption about moving Proposed Recommendation
+* [Candidate Recommendation Update Draft 6.2.8.2](https://htmlpreview.github.io/?https://github.com/w3c/tr-pages/blob/master/p2020mockup/cr-6.2.8.2.html)
 * [Recommendation 6.2.10](https://htmlpreview.github.io/?https://github.com/w3c/tr-pages/blob/master/p2020mockup/rec-6.2.10.html)
   1. "Update Draft" appears under the status sub-title
   1. SOTD talks about "Update Draft of a Candidate Recommendation"
