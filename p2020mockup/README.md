@@ -8,11 +8,12 @@ These are mockup versions of W3C Document for Process 2020.
   1. "to indicate that the document has received wide review and to encourage early implementation by the developer community."
   1. Does not make assumption about moving Proposed Recommendation
 * [Candidate Recommendation Update Draft 6.2.8.2](https://htmlpreview.github.io/?https://github.com/w3c/tr-pages/blob/master/p2020mockup/cr-6.2.8.2.html)
-* [Recommendation 6.2.10](https://htmlpreview.github.io/?https://github.com/w3c/tr-pages/blob/master/p2020mockup/rec-6.2.10.html)
   1. "Update Draft" appears under the status sub-title
   1. SOTD talks about "Update Draft of a Candidate Recommendation"
   1. "allow for wider review of the changes and for ease of reference to the integrated specification."
   1. Does not include a deadline for comments
+* [Recommendation 6.2.10](https://htmlpreview.github.io/?https://github.com/w3c/tr-pages/blob/master/p2020mockup/rec-6.2.10.html)
+  1. May add a sentence in the PP paragraph: "This document may be revised with new features using proposed additions." to allow Class 4 changes
 * [Recommendation (Class 1) 6.2.11.1](https://htmlpreview.github.io/?https://github.com/w3c/tr-pages/blob/master/p2020mockup/rec-6.2.11.1.html)
   1. No change from Process 2019.
   1. May add a sentence in the PP paragraph: "This document may be revised with new features using proposed additions." to allow Class 4 changes
