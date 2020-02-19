@@ -62,7 +62,7 @@
 
     const total = document.querySelectorAll(SELECTOR_PREFIX);
     const specs = document.querySelectorAll(SELECTOR_PREFIX + '[style*="opacity: 1"]');
-    summary.innerHTML = specs.length + ' specification' + (1 === specs.length ? '' : 's') + ' (total of ' + total.length + ' specifications, including retired documents)';
+    summary.innerHTML = specs.length + ' specification' + (1 > specs.length ? '' : 's') + ' (total of ' + total.length + ' specifications, including retired documents)';
     summary.classList.remove('busy');
 
     TOGGLE_STICKY();
