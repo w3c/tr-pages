@@ -29,37 +29,44 @@
         selectors.push('[data-tag~="' + filters.tag.value + '"]');
       if (filters.status.value)
         selectors.push('[data-status~="' + filters.status.value + '"]');
+      else
+        selectors.push(':not([data-status="ret"])');
       if (filters.version.value)
         selectors.push('[data-version~="' + filters.version.value + '"]');
     }
     qsOn = SELECTOR_PREFIX + selectors.join('');
-    if (0 === selectors.length) {
-      qsOff = SELECTOR_PREFIX + '[data-status="ret"]';
-    } else {
-      qsOff = selectors.map((i) => SELECTOR_PREFIX + ':not(' + i + ')').join(', ');
-      if ('ret' !== filters.status.value)
-        qsOff += ', ' + SELECTOR_PREFIX + '[data-status="ret"]';
-    }
-    off = document.querySelectorAll(qsOff);
-    off.forEach((i) => {
-      i.style.opacity = 0;
-      i.setAttribute('aria-hidden', 'true');
-    });
-    off.forEach((i) => {
-      i.style.display = 'none';
-    });
-    TOGGLE_STICKY();
+    qsOff = selectors.map((i) => {
+      return (i !== ':not([data-status="ret"])') ? SELECTOR_PREFIX + ':not(' + i + ')' : SELECTOR_PREFIX + '[data-status="ret"]';
+    }).join(', ');
+    if ('ret' !== filters.status.value)
+      qsOff += ', ' + SELECTOR_PREFIX + '[data-status="ret"]';
+
     on = document.querySelectorAll(qsOn);
-    if (selectors.length > 0)
-      summary.innerHTML = on.length + ' spec' + (1 === on.length ? '' : 's') + ' (of ' + (on.length + off.length) + ')';
-    else
-      summary.innerHTML = on.length + ' specs (no filters)';
-    summary.classList.remove('busy');
     on.forEach((i) => {
       i.removeAttribute('aria-hidden');
       i.style.display = 'inline-block';
       i.style.opacity = 1;
     });
+
+    off = document.querySelectorAll(qsOff);
+    off.forEach((i) => {
+      i.style.opacity = 0;
+      i.setAttribute('aria-hidden', 'true');
+    });
+    const listElement = document.getElementById("container");
+    listElement.addEventListener("transitionend", ({ target }) => {
+      if (target.style.opacity === "0") {
+        target.style.display = "none";
+      }
+    });
+
+    const total = document.querySelectorAll(SELECTOR_PREFIX);
+    const specs = document.querySelectorAll(SELECTOR_PREFIX + '[style*="opacity: 1"]');
+    summary.innerHTML = specs.length + ' specification' + (1 === specs.length ? '' : 's') + ' (total of ' + total.length + ' specifications, including retired documents)';
+    summary.classList.remove('busy');
+
+    TOGGLE_STICKY();
+
     if (!previousState)
       PUSH_STATE();
   };
