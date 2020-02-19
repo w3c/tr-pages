@@ -12,7 +12,11 @@ These are mockup versions of W3C Document for Process 2020.
   1. Does not include a deadline for comments, since any substantive changes would require the Group to publish a Snapshot before moving to Proposed Recommendation.
 * [Recommendation 6.2.10](https://htmlpreview.github.io/?https://github.com/w3c/tr-pages/blob/master/p2020mockup/rec-6.2.10.html)
   1. If the Group is allowed to make new features changes, add a sentence in the PP paragraph: "This document may be revised with new features using proposed additions." to allow new features changes
-* [Recommendation (no text change) 6.2.11.1](https://htmlpreview.github.io/?https://github.com/w3c/tr-pages/blob/master/p2020mockup/rec-6.2.11.1.html), [Recommendation (editorial corrections) 6.2.11.2](https://htmlpreview.github.io/?https://github.com/w3c/tr-pages/blob/master/p2020mockup/rec-6.2.11.2.html)
+* [Recommendation (no text change) 6.2.11.1](https://htmlpreview.github.io/?https://github.com/w3c/tr-pages/blob/master/p2020mockup/rec-6.2.11.1.html)
+  1. No change from Process 2019.
+  1. If the Group is allowed to make new features changes, add a sentence in the PP paragraph: "This document may be revised with new features using proposed additions." to allow new features changes
+  1. Note that some of those changes do not require a republication. Groups are welcome to use our [In-place modification policy](https://www.w3.org/2003/01/republishing/)
+* [Recommendation (editorial corrections) 6.2.11.2](https://htmlpreview.github.io/?https://github.com/w3c/tr-pages/blob/master/p2020mockup/rec-6.2.11.2.html)
   1. No change from Process 2019.
   1. If the Group is allowed to make new features changes, add a sentence in the PP paragraph: "This document may be revised with new features using proposed additions." to allow new features changes
 * [Recommendation (substantive corrections) 6.2.11.3](https://htmlpreview.github.io/?https://github.com/w3c/tr-pages/blob/master/p2020mockup/rec-6.2.11.3.html)
