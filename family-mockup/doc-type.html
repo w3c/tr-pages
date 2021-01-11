@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>TR families</title>
+    <style>
+      .wrapper {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 1fr 1fr;
+        background-color: #fff;
+        color: #444;
+      }
+      .family {
+        border-radius: 5px;
+        padding: 20px;
+        border: 1px solid;
+      }
+
+      .rec::after {
+        content: "REC";
+        background-color: #036;
+        font-size: 10px;
+        font-weight: 600;
+        padding: 4px 8px;
+        margin-left: 15px;
+        border-radius: 5px;
+        color: #fff;
+      }
+      .note::after {
+        content: "Note";
+        background-color: #036;
+        font-size: 10px;
+        font-weight: 600;
+        padding: 4px 8px;
+        margin-left: 15px;
+        border-radius: 5px;
+        color: #fff;
+      }
+      .wd::after {
+        content: "WD";
+        background-color: #036;
+        font-size: 10px;
+        font-weight: 600;
+        padding: 4px 8px;
+        margin-left: 15px;
+        border-radius: 5px;
+        color: #fff;
+      }
+      .cr::after {
+        content: "CR";
+        background-color: #036;
+        font-size: 10px;
+        font-weight: 600;
+        padding: 4px 8px;
+        margin-left: 15px;
+        border-radius: 5px;
+        color: #fff;
+      }
+ 
+      .pubdate, .pubeditors {
+        font-size: .9em;
+        margin: 0;
+      }
+      ul.taglist {
+        padding: 0;
+      }
+      ul.taglist li {
+        display: inline-block;
+        position: static;
+        color: #000;
+        font-size: 12px;
+        line-height: 10px;
+        padding: 4px 8px;
+        margin: 0px .5px;
+      }
+      li.media {
+        background-color: #b093b6
+      }
+      li.webapi {
+        background-color: #f5c45d
+      }
+      body > h1 {
+        margin-top: 50px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>TR families with specifications sorted by document type (primer, reference, registry, requirements, test cases, use cases, ...)</h1>
+    <div class="wrapper">
+      <div class="family">
+        <h2>Device API (link to series homepage)</h2>
+        <section>
+          <h3>Use cases</h3>
+          <ul>
+            <li><span class="note"><a href="https://www.w3.org/TR/2014/NOTE-netinfo-usecases-20140403/">Review of apps that use network information</a></span>
+              <p class="pubdate">2014-04-03</p>
+              <p class="pubeditors">Marcos Caceres, Fernando Jiménez Moreno, Ernesto Jimenez</p>
+              <ul class="taglist">
+                <li class="webapi">Web API
+              </ul>
+            <li><span class="note"><a href="https://www.w3.org/TR/2011/NOTE-hnreq-20111201/">Requirements for Home Networking Scenarios</a></span>
+              <p class="pubdate">2011-12-01</p>
+              <p class="pubeditors">Giuseppe Pascale</p>
+              <ul class="taglist">
+                <li class="media">Media
+              </ul>
+            <li><span class="note"><a href="https://www.w3.org/TR/2011/NOTE-dap-policy-reqs-20110317/">Device API Access Control Use Cases and Requirements</a></span>
+              <p class="pubdate">2011-03-17</p>
+              <p class="pubeditors">Laura Arribas, Frederick Hirsch,Dominique Hazaël-Massieux</p>
+          </ul>
+        </section>
+        <section>
+          <h3>Requirements</h3>
+          <ul>
+            <li><span class="note"><a href="https://www.w3.org/TR/2010/NOTE-dap-privacy-reqs-20100629/">Device API Privacy Requirements</a></span>
+              <p class="pubdate">2010-06-29</p>
+              <p class="pubeditors">"Alissa Cooper, Frederick Hirsch, John Morris</p>
+            <li><span class="note"><a href="https://www.w3.org/TR/2009/NOTE-dap-api-reqs-20091015/">Device APIs Requirements</a></span>
+              <p class="pubdate">2009-10-15</p>
+              <p class="pubeditors">Robin Berjon, Daniel Coloma, Max Froumentin, Marcin Hanclik, Jere Käpyaho, Kangchan Lee, Bryan Sullivan, Dzung Tran</p>
+              <ul class="taglist">
+                <li class="webapi">Web API
+              </ul>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>

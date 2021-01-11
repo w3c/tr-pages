@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>TR families</title>
+    <style>
+      .wrapper {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 1fr 1fr;
+        background-color: #fff;
+        color: #444;
+      }
+      .family {
+        border-radius: 5px;
+        padding: 20px;
+        border: 1px solid;
+      }
+
+      .rec::after {
+        content: "REC";
+        background-color: #036;
+        font-size: 10px;
+        font-weight: 600;
+        padding: 4px 8px;
+        margin-left: 15px;
+        border-radius: 5px;
+        color: #fff;
+      }
+      .note::after {
+        content: "Note";
+        background-color: #036;
+        font-size: 10px;
+        font-weight: 600;
+        padding: 4px 8px;
+        margin-left: 15px;
+        border-radius: 5px;
+        color: #fff;
+      }
+      .wd::after {
+        content: "WD";
+        background-color: #036;
+        font-size: 10px;
+        font-weight: 600;
+        padding: 4px 8px;
+        margin-left: 15px;
+        border-radius: 5px;
+        color: #fff;
+      }
+      .cr::after {
+        content: "CR";
+        background-color: #036;
+        font-size: 10px;
+        font-weight: 600;
+        padding: 4px 8px;
+        margin-left: 15px;
+        border-radius: 5px;
+        color: #fff;
+      }
+ 
+      .pubdate, .pubeditors {
+        font-size: .9em;
+        margin: 0;
+      }
+      ul.taglist {
+        padding: 0;
+      }
+      ul.taglist li {
+        display: inline-block;
+        position: static;
+        color: #000;
+        font-size: 12px;
+        line-height: 10px;
+        padding: 4px 8px;
+        margin: 0px .5px;
+      }
+      li.media {
+        background-color: #b093b6
+      }
+      li.webapi {
+        background-color: #f5c45d
+      }
+      body > h1 {
+        margin-top: 50px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>TR families with specifications grouped by series</h1>
+    <div class="wrapper">
+      <div class="family">
+        <h2>Performance instrumentation (link to series homepage)</h2>
+        <section>
+          <h3>High Resolution Time</h3>
+          <ul>
+            <li><span class="wd"><a href="https://www.w3.org/TR/2020/WD-hr-time-3-20201001/">High Resolution Time Level 3</a></span>
+              <p class="pubdate">2020-10-01</p>
+              <p class="pubeditors">Ilya Grigorik</p>
+            <li><span class="rec"><a href="https://www.w3.org/TR/2019/REC-hr-time-2-20191121/">High Resolution Time Level 2</a></span>
+              <p class="pubdate">2019-11-21</p>
+              <p class="pubeditors">Ilya Grigorik</p>
+          </ul>
+        </section>
+        <section>
+          <h3>Navigation Timing</h3>
+          <ul>
+            <li><span class="wd"><a href="https://www.w3.org/TR/2020/WD-navigation-timing-2-20200915/">Navigation Timing Level 2</a></span>
+              <p class="pubdate">2020-09-15</p>
+              <p class="pubeditors">Ilya Grigorik, Tobin Titus, Jatinder Mann, Arvind Jain</p>
+            <li><span class="rec"><a href="https://www.w3.org/TR/2012/REC-navigation-timing-20121217/">Navigation Timing</a></span>
+              <p class="pubdate">2012-12-17</p>
+              <p class="pubeditors">Zhiheng Wang</p>
+          </ul>
+        </section>
+        <section>
+          <h3>Performance Timeline</h3>
+          <ul>
+            <li><span class="wd"><a href="https://www.w3.org/TR/2019/WD-performance-timeline-2-20191024/">Performance Timeline Level 2</a></span>
+              <p class="pubdate">2019-10-24</p>
+              <p class="pubeditors">Ilya Grigorik</p>
+            <li><span class="rec"><a href="https://www.w3.org/TR/2013/REC-performance-timeline-20131212/">Performance Timeline</a></span>
+              <p class="pubdate">2013-12-12</p>
+              <p class="pubeditors">Jatinder Mann, Zhiheng Wang</p>
+          </ul>
+        </section>
+        <section>
+          <h3>Resource Timing</h3>
+          <ul>
+            <li><span class="wd"><a href="https://www.w3.org/TR/2020/WD-resource-timing-2-20200818/">Resource Timing Level 2</a></span>
+              <p class="pubdate">2020-08-18</p>
+              <p class="pubeditors">Todd Reifsteck, Ilya Grigorik, Yoav Weiss, Arvind Jain, Jatinder Mann, Zhiheng Wang, Anderson Quach</p>
+            <li><span class="cr"><a href="https://www.w3.org/TR/2017/CR-resource-timing-1-20170330/">Resource Timing Level 1</a></span>
+              <p class="pubdate">2017-03-30</p>
+              <p class="pubeditors">Arvind Jain, Todd Reifsteck, Jatinder Mann, Zhiheng Wang, Anderson Quach</p>
+          </ul>
+        </section>
+        <section>
+          <h3>Server Timing</h3>
+          <ul>
+            <li><span class="wd"><a href="https://www.w3.org/TR/2020/WD-server-timing-20200728/">Server Timing</a></span>
+              <p class="pubdate">2020-07-28</p>
+              <p class="pubeditors">Charles Vazac, Ilya Grigorik</p>
+          </ul>
+        </section>
+        <section>
+          <h3>Timing Entry Names Registry</h3>
+          <ul>
+            <li><span class="wd"><a href="https://www.w3.org/TR/2019/WD-timing-entrytypes-registry-20190723/">Timing Entry Names Registry</a></span>
+              <p class="pubdate">2019-07-23</p>
+              <p class="pubeditors">Philippe Le Hégaret</p>
+          </ul>
+        </section>
+        <section>
+          <h3>User Timing</h3>
+          <ul>
+            <li><span class="wd"><a href="https://www.w3.org/TR/2020/WD-user-timing-3-20200818/">User Timing Level 3</a></span>
+              <p class="pubdate">2020-08-18</p>
+              <p class="pubeditors">Ilya Grigorik, Nicolas Pena Moreno, Jatinder Mann, Zhiheng Wang, Anderson Quach</p>
+            <li><span class="rec"><a href="https://www.w3.org/TR/2019/REC-user-timing-2-20190226/">User Timing Level 2</a></span>
+              <p class="pubdate">2019-02-26</p>
+              <p class="pubeditors">Ilya Grigorik</p>
+          </ul>
+        </section>
+      </div>
+
+  </body>
+</html>
