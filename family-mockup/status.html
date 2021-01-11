@@ -14,49 +14,38 @@
       }
       .family {
         border-radius: 5px;
-        padding: 20px;
+        padding: 0;
         border: 1px solid;
       }
+      ul { list-style: none;}
 
-      .rec::after {
+      li::before {
+        font-size: 10px;
+        font-weight: 600;
+        padding: 4px 8px;
+        margin-right: 15px;
+        border-radius: 5px;
+        width: 2.5em;
+        color: #FFF;
+        display: inline-block;
+      }
+      .rec::before {
         content: "REC";
-        background-color: #036;
-        font-size: 10px;
-        font-weight: 600;
-        padding: 4px 8px;
-        margin-left: 15px;
-        border-radius: 5px;
-        color: #fff;
+        background-color: #005F9A;
       }
-      .note::after {
-        content: "Note";
-        background-color: #036;
-        font-size: 10px;
-        font-weight: 600;
-        padding: 4px 8px;
-        margin-left: 15px;
-        border-radius: 5px;
-        color: #fff;
+      .note::before {
+          content: "Note";
+          color: #005F9A;
+        background-color: white;
+        border: thin solid #005F9A;
       }
-      .wd::after {
+      .wd::before {
         content: "WD";
         background-color: #036;
-        font-size: 10px;
-        font-weight: 600;
-        padding: 4px 8px;
-        margin-left: 15px;
-        border-radius: 5px;
-        color: #fff;
       }
-      .cr::after {
+      .cr::before {
         content: "CR";
         background-color: #036;
-        font-size: 10px;
-        font-weight: 600;
-        padding: 4px 8px;
-        margin-left: 15px;
-        border-radius: 5px;
-        color: #fff;
       }
  
       .pubdate, .pubeditors {
@@ -84,35 +73,40 @@
       body > h1 {
         margin-top: 50px;
       }
-
+      li { display: flex;}
+      li p.pubdate { width: 5em; margin-left: auto;}
+      li p.pubeditors {display: none;}
+      section { padding-right: 1em;}
+      section h3 { transform-origin: top left; transform: rotate(-90deg) translateX(-7em); max-width: 10em;}
+      .completed { background-color: #ccc; padding: 0.5em 1em 1em 0;}
     </style>
   </head>
   <body>
     <h1>TR families with specifications sorted by status</h1>
     <div class="wrapper">
       <div class="family">
-        <h2>CSP </h2>
-        <section>
-          <h3>Completed Work</h3>
+        <h2>Content Security Policy</h2>
+        <section class=completed>
+          <h3>Completed</h3>
           <ul>
-            <li><span class="rec"><a href="https://www.w3.org/TR/2016/REC-CSP2-20161215/">Content Security Policy Level 2</a></span>
+            <li class="rec"><a href="https://www.w3.org/TR/2016/REC-CSP2-20161215/">Content Security Policy Level 2</a>
               <p class="pubdate">2016-12-15</p>
               <p class="pubeditors">Mike West Adam Barth Daniel Veditz</p>
-            <li><span class="note"><a href="https://www.w3.org/TR/2016/NOTE-csp-cookies-20160913/">Content Security Policy: Cookie Controls</a></span>
+            <li class="note"><a href="https://www.w3.org/TR/2016/NOTE-csp-cookies-20160913/">Content Security Policy: Cookie Controls</a>
               <p class="pubdate">2016-09-13</p>
               <p class="pubeditors">Mike West</p>
-            <li><span class="note"><a href="https://www.w3.org/TR/2016/NOTE-csp-pinning-20160913/">Content Security Policy Pinning</a></span>
+            <li class="note"><a href="https://www.w3.org/TR/2016/NOTE-csp-pinning-20160913/">Content Security Policy Pinning</a>
               <p class="pubdate">2016-09-13</p>
               <p class="pubeditors">Mike West</p>
           </ul>
         </section>
-        <section>
-          <h3>Work in progress</h3>
+        <section class=inprogress>
+          <h3>In Progress</h3>
           <ul>
-            <li><span class="wd"><a href="https://www.w3.org/TR/2018/WD-CSP3-20181015/">Content Security Policy Level 3</a></span>
+            <li class="wd"><a href="https://www.w3.org/TR/2018/WD-CSP3-20181015/">Content Security Policy Level 3</a>
               <p class="pubdate">2018-10-15</p>
               <p class="pubeditors">Mike West</p>
-            <li><span class="wd"><a href="https://www.w3.org/TR/2016/WD-csp-embedded-enforcement-20160909/">Content Security Policy: Embedded Enforcement</a></span>
+            <li class="wd"><a href="https://www.w3.org/TR/2016/WD-csp-embedded-enforcement-20160909/">Content Security Policy: Embedded Enforcement</a>
               <p class="pubdate">2016-09-09</p>
               <p class="pubeditors">Mike West</p>
           </ul>
@@ -121,72 +115,72 @@
       <div class="family">
         <h2>Language Gap Analysis </h2>
         <section>
-          <h3>Work in progress</h3>
+          <h3>In Progress</h3>
           <ul>
-            <li><span class="wd"><a href="https://www.w3.org/TR/2020/WD-grek-gap-20200715/">Modern Greek Gap Analysis</a></span>
+            <li class="wd"><a href="https://www.w3.org/TR/2020/WD-grek-gap-20200715/">Modern Greek Gap Analysis</a>
               <p class="pubdate">2020-07-15</p>
               <p class="pubeditors">Richard Ishida</p>
-            <li><span class="wd"><a href="https://www.w3.org/TR/2020/WD-latn-hu-gap-20200715/">Hungarian Gap Analysis</a></span>
+            <li class="wd"><a href="https://www.w3.org/TR/2020/WD-latn-hu-gap-20200715/">Hungarian Gap Analysis</a>
               <p class="pubdate">2020-07-15</p>
               <p class="pubeditors">Ivan, Herman, Richard Ishida</p>
-            <li><span class="wd"><a href="https://www.w3.org/TR/2020/WD-latn-nl-gap-20200715/">Dutch Gap Analysis</a></span>
+            <li class="wd"><a href="https://www.w3.org/TR/2020/WD-latn-nl-gap-20200715/">Dutch Gap Analysis</a>
               <p class="pubdate">2020-07-15</p>
               <p class="pubeditors">Bert Bos, Richard Ishida</p>
-            <li><span class="wd"><a href="https://www.w3.org/TR/2020/WD-cans-iu-cr-gap-20200715/">Inuktitut &amp; Cree Gap Analysis</a></span>
+            <li class="wd"><a href="https://www.w3.org/TR/2020/WD-cans-iu-cr-gap-20200715/">Inuktitut &amp; Cree Gap Analysis</a>
               <p class="pubdate">2020-07-15</p>
               <p class="pubeditors">Richard Ishida</p>
-            <li><span class="wd"><a href="https://www.w3.org/TR/2020/WD-cher-gap-20200715/">Cherokee Gap Analysis</a></span>
+            <li class="wd"><a href="https://www.w3.org/TR/2020/WD-cher-gap-20200715/">Cherokee Gap Analysis</a>
               <p class="pubdate">2020-07-15</p>
               <p class="pubeditors">Richard Ishida</p>
-            <li><span class="wd"><a href="https://www.w3.org/TR/2020/WD-geor-gap-20200715/">Georgian Gap Analysis</a></span>
+            <li class="wd"><a href="https://www.w3.org/TR/2020/WD-geor-gap-20200715/">Georgian Gap Analysis</a>
               <p class="pubdate">2020-07-15</p>
               <p class="pubeditors">Richard Ishida</p>
-            <li><span class="wd"><a href="https://www.w3.org/TR/2020/WD-khmr-gap-20200616/">Khmer Gap Analysis</a></span>
+            <li class="wd"><a href="https://www.w3.org/TR/2020/WD-khmr-gap-20200616/">Khmer Gap Analysis</a>
               <p class="pubdate">2020-07-15</p>
               <p class="pubeditors">Richard Ishida</p>
-            <li><span class="wd"><a href="https://www.w3.org/TR/2020/WD-gujr-gap-20200616/">Gujarati Gap Analysis</a></span>
+            <li class="wd"><a href="https://www.w3.org/TR/2020/WD-gujr-gap-20200616/">Gujarati Gap Analysis</a>
               <p class="pubdate">2020-07-15</p>
               <p class="pubeditors">Richard Ishida</p>
-            <li><span class="wd"><a href="https://www.w3.org/TR/2020/WD-java-gap-20200616/">Javanese Script Gap Analysis</a></span>
+            <li class="wd"><a href="https://www.w3.org/TR/2020/WD-java-gap-20200616/">Javanese Script Gap Analysis</a>
               <p class="pubdate">2020-06-16</p>
               <p class="pubeditors">Richard Ishida</p>
-            <li><span class="wd"><a href="https://www.w3.org/TR/2020/WD-taml-gap-20200616/">Tamil Gap Analysis</a></span>
+            <li class="wd"><a href="https://www.w3.org/TR/2020/WD-taml-gap-20200616/">Tamil Gap Analysis</a>
               <p class="pubdate">2020-06-16</p>
               <p class="pubeditors">Richard Ishida</p>
-            <li><span class="wd"><a href="https://www.w3.org/TR/2020/WD-alreq-gap-20200616/">Arabic &amp; Persian Gap Analysis</a></span>
+            <li class="wd"><a href="https://www.w3.org/TR/2020/WD-alreq-gap-20200616/">Arabic &amp; Persian Gap Analysis</a>
               <p class="pubdate">2020-06-16</p>
               <p class="pubeditors">Richard Ishida</p>
-            <li><span class="wd"><a href="https://www.w3.org/TR/2020/WD-thai-gap-20200616/">Thai Gap Analysis</a></span>
+            <li class="wd"><a href="https://www.w3.org/TR/2020/WD-thai-gap-20200616/">Thai Gap Analysis</a>
               <p class="pubdate">2020-06-16</p>
               <p class="pubeditors">Richard Ishida</p>
-            <li><span class="wd"><a href="https://www.w3.org/TR/2020/WD-jpan-gap-20200616/">Japanese Gap Analysis</a></span>
+            <li class="wd"><a href="https://www.w3.org/TR/2020/WD-jpan-gap-20200616/">Japanese Gap Analysis</a>
               <p class="pubdate">2020-06-16</p>
               <p class="pubeditors">Richard Ishida</p>
-            <li><span class="wd"><a href="https://www.w3.org/TR/2020/WD-clreq-gap-20200616/">Chinese Layout Gap Analysis</a></span>
+            <li class="wd"><a href="https://www.w3.org/TR/2020/WD-clreq-gap-20200616/">Chinese Layout Gap Analysis</a>
               <p class="pubdate">2020-06-16</p>
               <p class="pubeditors">Fuqiao Xue, Richard Ishida</p>
-            <li><span class="wd"><a href="https://www.w3.org/TR/2020/WD-mong-gap-20200616/">Mongolian Gap Analysis</a></span>
+            <li class="wd"><a href="https://www.w3.org/TR/2020/WD-mong-gap-20200616/">Mongolian Gap Analysis</a>
               <p class="pubdate">2020-06-16</p>
               <p class="pubeditors">Richard Ishida</p>
-            <li><span class="wd"><a href="https://www.w3.org/TR/2020/WD-beng-gap-20200616/">Bengali Gap Analysis</a></span>
+            <li class="wd"><a href="https://www.w3.org/TR/2020/WD-beng-gap-20200616/">Bengali Gap Analysis</a>
               <p class="pubdate">2020-06-16</p>
               <p class="pubeditors">Richard Ishida</p>
-            <li><span class="wd"><a href="https://www.w3.org/TR/2020/WD-tibt-gap-20200616/">Tibetan Gap Analysis</a></span>
+            <li class="wd"><a href="https://www.w3.org/TR/2020/WD-tibt-gap-20200616/">Tibetan Gap Analysis</a>
               <p class="pubdate">2020-06-16</p>
               <p class="pubeditors">Richard Ishida</p>
-            <li><span class="wd"><a href="https://www.w3.org/TR/2020/WD-deva-gap-20200616/">Devanagari Gap Analysis</a></span>
+            <li class="wd"><a href="https://www.w3.org/TR/2020/WD-deva-gap-20200616/">Devanagari Gap Analysis</a>
               <p class="pubdate">2020-06-16</p>
               <p class="pubeditors">Akshat Joshi, Richard Ishida</p>
-            <li><span class="wd"><a href="https://www.w3.org/TR/2020/WD-laoo-gap-20200616/">Lao Gap Analysis</a></span>
+            <li class="wd"><a href="https://www.w3.org/TR/2020/WD-laoo-gap-20200616/">Lao Gap Analysis</a>
               <p class="pubdate">2020-06-16</p>
               <p class="pubeditors">Richard Ishida</p>
-            <li><span class="wd"><a href="https://www.w3.org/TR/2020/WD-guru-gap-20200616/">Gurmukhi Gap Analysis</a></span>
+            <li class="wd"><a href="https://www.w3.org/TR/2020/WD-guru-gap-20200616/">Gurmukhi Gap Analysis</a>
               <p class="pubdate">2020-06-16</p>
               <p class="pubeditors">Richard Ishida</p>
-            <li><span class="wd"><a href="https://www.w3.org/TR/2020/WD-elreq-gap-20200611/">Ethiopic Layout Gap Analysis</a></span>
+            <li class="wd"><a href="https://www.w3.org/TR/2020/WD-elreq-gap-20200611/">Ethiopic Layout Gap Analysis</a>
               <p class="pubdate">2020-06-16</p>
               <p class="pubeditors">Richard Ishida</p>
-            <li><span class="wd"><a href="https://www.w3.org/TR/2020/WD-typography-20200520/">Language enablement index</a></span>
+            <li class="wd"><a href="https://www.w3.org/TR/2020/WD-typography-20200520/">Language enablement index</a>
               <p class="pubdate">2020-05-20</p>
               <p class="pubeditors">Richard Ishida</p>
            </ul>
@@ -195,9 +189,9 @@
        <div class="family">
         <h2>MiniApp </h2>
         <section>
-          <h3>Work in progress</h3>
+          <h3>In Progress</h3>
           <ul>
-            <li><span class="wd"><a href="https://www.w3.org/TR/2019/WD-mini-app-white-paper-20190912/">MiniApp Standardization White Paper</a></span>
+            <li class="wd"><a href="https://www.w3.org/TR/2019/WD-mini-app-white-paper-20190912/">MiniApp Standardization White Paper</a>
               <p class="pubdate">2019-09-12</p>
               <p class="pubeditors">Angel Li Qing An Dapeng Liu Hongru (Judy) Zhu Qingqian Tao Zhixing Lei Zhou Shen Zhiqiang Yu Wanming Lin xiaowei jiang Fuqiao Xue Lei Zhao</p>
           </ul>
