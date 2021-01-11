@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>TR families</title>
+    <style>
+      .wrapper {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 1fr 1fr;
+        background-color: #fff;
+        color: #444;
+      }
+      .family {
+        border-radius: 5px;
+        padding: 20px;
+        border: 1px solid;
+      }
+
+      .rec::after {
+        content: "REC";
+        background-color: #036;
+        font-size: 10px;
+        font-weight: 600;
+        padding: 4px 8px;
+        margin-left: 15px;
+        border-radius: 5px;
+        color: #fff;
+      }
+      .note::after {
+        content: "Note";
+        background-color: #036;
+        font-size: 10px;
+        font-weight: 600;
+        padding: 4px 8px;
+        margin-left: 15px;
+        border-radius: 5px;
+        color: #fff;
+      }
+      .wd::after {
+        content: "WD";
+        background-color: #036;
+        font-size: 10px;
+        font-weight: 600;
+        padding: 4px 8px;
+        margin-left: 15px;
+        border-radius: 5px;
+        color: #fff;
+      }
+      .cr::after {
+        content: "CR";
+        background-color: #036;
+        font-size: 10px;
+        font-weight: 600;
+        padding: 4px 8px;
+        margin-left: 15px;
+        border-radius: 5px;
+        color: #fff;
+      }
+ 
+      .pubdate, .pubeditors {
+        font-size: .9em;
+        margin: 0;
+      }
+      ul.taglist {
+        padding: 0;
+      }
+      ul.taglist li {
+        display: inline-block;
+        position: static;
+        color: #000;
+        font-size: 12px;
+        line-height: 10px;
+        padding: 4px 8px;
+        margin: 0px .5px;
+      }
+      li.media {
+        background-color: #b093b6
+      }
+      li.webapi {
+        background-color: #f5c45d
+      }
+      body > h1 {
+        margin-top: 50px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>TR families with specifications sorted by status</h1>
+    <div class="wrapper">
+      <div class="family">
+        <h2>CSP (link to series homepage)</h2>
+        <section>
+          <h3>Completed Work</h3>
+          <ul>
+            <li><span class="rec"><a href="https://www.w3.org/TR/2016/REC-CSP2-20161215/">Content Security Policy Level 2</a></span>
+              <p class="pubdate">2016-12-15</p>
+              <p class="pubeditors">Mike West Adam Barth Daniel Veditz</p>
+            <li><span class="note"><a href="https://www.w3.org/TR/2016/NOTE-csp-cookies-20160913/">Content Security Policy: Cookie Controls</a></span>
+              <p class="pubdate">2016-09-13</p>
+              <p class="pubeditors">Mike West</p>
+            <li><span class="note"><a href="https://www.w3.org/TR/2016/NOTE-csp-pinning-20160913/">Content Security Policy Pinning</a></span>
+              <p class="pubdate">2016-09-13</p>
+              <p class="pubeditors">Mike West</p>
+          </ul>
+        </section>
+        <section>
+          <h3>Work in progress</h3>
+          <ul>
+            <li><span class="wd"><a href="https://www.w3.org/TR/2018/WD-CSP3-20181015/">Content Security Policy Level 3</a></span>
+              <p class="pubdate">2018-10-15</p>
+              <p class="pubeditors">Mike West</p>
+            <li><span class="wd"><a href="https://www.w3.org/TR/2016/WD-csp-embedded-enforcement-20160909/">Content Security Policy: Embedded Enforcement</a></span>
+              <p class="pubdate">2016-09-09</p>
+              <p class="pubeditors">Mike West</p>
+          </ul>
+        </section>
+      </div>
+      <div class="family">
+        <h2>Language Gap Analysis (link to series homepage)</h2>
+        <section>
+          <h3>Work in progress</h3>
+          <ul>
+            <li><span class="wd"><a href="https://www.w3.org/TR/2020/WD-grek-gap-20200715/">Modern Greek Gap Analysis</a></span>
+              <p class="pubdate">2020-07-15</p>
+              <p class="pubeditors">Richard Ishida</p>
+            <li><span class="wd"><a href="https://www.w3.org/TR/2020/WD-latn-hu-gap-20200715/">Hungarian Gap Analysis</a></span>
+              <p class="pubdate">2020-07-15</p>
+              <p class="pubeditors">Ivan, Herman, Richard Ishida</p>
+            <li><span class="wd"><a href="https://www.w3.org/TR/2020/WD-latn-nl-gap-20200715/">Dutch Gap Analysis</a></span>
+              <p class="pubdate">2020-07-15</p>
+              <p class="pubeditors">Bert Bos, Richard Ishida</p>
+            <li><span class="wd"><a href="https://www.w3.org/TR/2020/WD-cans-iu-cr-gap-20200715/">Inuktitut &amp; Cree Gap Analysis</a></span>
+              <p class="pubdate">2020-07-15</p>
+              <p class="pubeditors">Richard Ishida</p>
+            <li><span class="wd"><a href="https://www.w3.org/TR/2020/WD-cher-gap-20200715/">Cherokee Gap Analysis</a></span>
+              <p class="pubdate">2020-07-15</p>
+              <p class="pubeditors">Richard Ishida</p>
+            <li><span class="wd"><a href="https://www.w3.org/TR/2020/WD-geor-gap-20200715/">Georgian Gap Analysis</a></span>
+              <p class="pubdate">2020-07-15</p>
+              <p class="pubeditors">Richard Ishida</p>
+            <li><span class="wd"><a href="https://www.w3.org/TR/2020/WD-khmr-gap-20200616/">Khmer Gap Analysis</a></span>
+              <p class="pubdate">2020-07-15</p>
+              <p class="pubeditors">Richard Ishida</p>
+            <li><span class="wd"><a href="https://www.w3.org/TR/2020/WD-gujr-gap-20200616/">Gujarati Gap Analysis</a></span>
+              <p class="pubdate">2020-07-15</p>
+              <p class="pubeditors">Richard Ishida</p>
+            <li><span class="wd"><a href="https://www.w3.org/TR/2020/WD-java-gap-20200616/">Javanese Script Gap Analysis</a></span>
+              <p class="pubdate">2020-06-16</p>
+              <p class="pubeditors">Richard Ishida</p>
+            <li><span class="wd"><a href="https://www.w3.org/TR/2020/WD-taml-gap-20200616/">Tamil Gap Analysis</a></span>
+              <p class="pubdate">2020-06-16</p>
+              <p class="pubeditors">Richard Ishida</p>
+            <li><span class="wd"><a href="https://www.w3.org/TR/2020/WD-alreq-gap-20200616/">Arabic &amp; Persian Gap Analysis</a></span>
+              <p class="pubdate">2020-06-16</p>
+              <p class="pubeditors">Richard Ishida</p>
+            <li><span class="wd"><a href="https://www.w3.org/TR/2020/WD-thai-gap-20200616/">Thai Gap Analysis</a></span>
+              <p class="pubdate">2020-06-16</p>
+              <p class="pubeditors">Richard Ishida</p>
+            <li><span class="wd"><a href="https://www.w3.org/TR/2020/WD-jpan-gap-20200616/">Japanese Gap Analysis</a></span>
+              <p class="pubdate">2020-06-16</p>
+              <p class="pubeditors">Richard Ishida</p>
+            <li><span class="wd"><a href="https://www.w3.org/TR/2020/WD-clreq-gap-20200616/">Chinese Layout Gap Analysis</a></span>
+              <p class="pubdate">2020-06-16</p>
+              <p class="pubeditors">Fuqiao Xue, Richard Ishida</p>
+            <li><span class="wd"><a href="https://www.w3.org/TR/2020/WD-mong-gap-20200616/">Mongolian Gap Analysis</a></span>
+              <p class="pubdate">2020-06-16</p>
+              <p class="pubeditors">Richard Ishida</p>
+            <li><span class="wd"><a href="https://www.w3.org/TR/2020/WD-beng-gap-20200616/">Bengali Gap Analysis</a></span>
+              <p class="pubdate">2020-06-16</p>
+              <p class="pubeditors">Richard Ishida</p>
+            <li><span class="wd"><a href="https://www.w3.org/TR/2020/WD-tibt-gap-20200616/">Tibetan Gap Analysis</a></span>
+              <p class="pubdate">2020-06-16</p>
+              <p class="pubeditors">Richard Ishida</p>
+            <li><span class="wd"><a href="https://www.w3.org/TR/2020/WD-deva-gap-20200616/">Devanagari Gap Analysis</a></span>
+              <p class="pubdate">2020-06-16</p>
+              <p class="pubeditors">Akshat Joshi, Richard Ishida</p>
+            <li><span class="wd"><a href="https://www.w3.org/TR/2020/WD-laoo-gap-20200616/">Lao Gap Analysis</a></span>
+              <p class="pubdate">2020-06-16</p>
+              <p class="pubeditors">Richard Ishida</p>
+            <li><span class="wd"><a href="https://www.w3.org/TR/2020/WD-guru-gap-20200616/">Gurmukhi Gap Analysis</a></span>
+              <p class="pubdate">2020-06-16</p>
+              <p class="pubeditors">Richard Ishida</p>
+            <li><span class="wd"><a href="https://www.w3.org/TR/2020/WD-elreq-gap-20200611/">Ethiopic Layout Gap Analysis</a></span>
+              <p class="pubdate">2020-06-16</p>
+              <p class="pubeditors">Richard Ishida</p>
+            <li><span class="wd"><a href="https://www.w3.org/TR/2020/WD-typography-20200520/">Language enablement index</a></span>
+              <p class="pubdate">2020-05-20</p>
+              <p class="pubeditors">Richard Ishida</p>
+           </ul>
+         </section>
+       </div>
+       <div class="family">
+        <h2>MiniApp (link to series homepage)</h2>
+        <section>
+          <h3>Work in progress</h3>
+          <ul>
+            <li><span class="wd"><a href="https://www.w3.org/TR/2019/WD-mini-app-white-paper-20190912/">MiniApp Standardization White Paper</a></span>
+              <p class="pubdate">2019-09-12</p>
+              <p class="pubeditors">Angel Li Qing An Dapeng Liu Hongru (Judy) Zhu Qingqian Tao Zhixing Lei Zhou Shen Zhiqiang Yu Wanming Lin xiaowei jiang Fuqiao Xue Lei Zhao</p>
+          </ul>
+        </section>
+      </div>
+    </div>
+    <h1>TR families with specifications sorted by document type (primer, reference, registry, requirements, test cases, use cases, ...)</h1>
+    <div class="wrapper">
+      <div class="family">
+        <h2>Device API (link to series homepage)</h2>
+        <section>
+          <h3>Use cases</h3>
+          <ul>
+            <li><span class="note"><a href="https://www.w3.org/TR/2014/NOTE-netinfo-usecases-20140403/">Review of apps that use network information</a></span>
+              <p class="pubdate">2014-04-03</p>
+              <p class="pubeditors">Marcos Caceres, Fernando Jiménez Moreno, Ernesto Jimenez</p>
+              <ul class="taglist">
+                <li class="webapi">Web API
+              </ul>
+            <li><span class="note"><a href="https://www.w3.org/TR/2011/NOTE-hnreq-20111201/">Requirements for Home Networking Scenarios</a></span>
+              <p class="pubdate">2011-12-01</p>
+              <p class="pubeditors">Giuseppe Pascale</p>
+              <ul class="taglist">
+                <li class="media">Media
+              </ul>
+            <li><span class="note"><a href="https://www.w3.org/TR/2011/NOTE-dap-policy-reqs-20110317/">Device API Access Control Use Cases and Requirements</a></span>
+              <p class="pubdate">2011-03-17</p>
+              <p class="pubeditors">Laura Arribas, Frederick Hirsch,Dominique Hazaël-Massieux</p>
+          </ul>
+        </section>
+        <section>
+          <h3>Requirements</h3>
+          <ul>
+            <li><span class="note"><a href="https://www.w3.org/TR/2010/NOTE-dap-privacy-reqs-20100629/">Device API Privacy Requirements</a></span>
+              <p class="pubdate">2010-06-29</p>
+              <p class="pubeditors">"Alissa Cooper, Frederick Hirsch, John Morris</p>
+            <li><span class="note"><a href="https://www.w3.org/TR/2009/NOTE-dap-api-reqs-20091015/">Device APIs Requirements</a></span>
+              <p class="pubdate">2009-10-15</p>
+              <p class="pubeditors">Robin Berjon, Daniel Coloma, Max Froumentin, Marcin Hanclik, Jere Käpyaho, Kangchan Lee, Bryan Sullivan, Dzung Tran</p>
+              <ul class="taglist">
+                <li class="webapi">Web API
+              </ul>
+          </ul>
+        </section>
+      </div>
+    </div>
+    <h1>TR families with specifications grouped by series</h1>
+    <div class="wrapper">
+      <div class="family">
+        <h2>Performance instrumentation (link to series homepage)</h2>
+        <section>
+          <h3>High Resolution Time</h3>
+          <ul>
+            <li><span class="wd"><a href="https://www.w3.org/TR/2020/WD-hr-time-3-20201001/">High Resolution Time Level 3</a></span>
+              <p class="pubdate">2020-10-01</p>
+              <p class="pubeditors">Ilya Grigorik</p>
+            <li><span class="rec"><a href="https://www.w3.org/TR/2019/REC-hr-time-2-20191121/">High Resolution Time Level 2</a></span>
+              <p class="pubdate">2019-11-21</p>
+              <p class="pubeditors">Ilya Grigorik</p>
+          </ul>
+        </section>
+        <section>
+          <h3>Navigation Timing</h3>
+          <ul>
+            <li><span class="wd"><a href="https://www.w3.org/TR/2020/WD-navigation-timing-2-20200915/">Navigation Timing Level 2</a></span>
+              <p class="pubdate">2020-09-15</p>
+              <p class="pubeditors">Ilya Grigorik, Tobin Titus, Jatinder Mann, Arvind Jain</p>
+            <li><span class="rec"><a href="https://www.w3.org/TR/2012/REC-navigation-timing-20121217/">Navigation Timing</a></span>
+              <p class="pubdate">2012-12-17</p>
+              <p class="pubeditors">Zhiheng Wang</p>
+          </ul>
+        </section>
+        <section>
+          <h3>Performance Timeline</h3>
+          <ul>
+            <li><span class="wd"><a href="https://www.w3.org/TR/2019/WD-performance-timeline-2-20191024/">Performance Timeline Level 2</a></span>
+              <p class="pubdate">2019-10-24</p>
+              <p class="pubeditors">Ilya Grigorik</p>
+            <li><span class="rec"><a href="https://www.w3.org/TR/2013/REC-performance-timeline-20131212/">Performance Timeline</a></span>
+              <p class="pubdate">2013-12-12</p>
+              <p class="pubeditors">Jatinder Mann, Zhiheng Wang</p>
+          </ul>
+        </section>
+        <section>
+          <h3>Resource Timing</h3>
+          <ul>
+            <li><span class="wd"><a href="https://www.w3.org/TR/2020/WD-resource-timing-2-20200818/">Resource Timing Level 2</a></span>
+              <p class="pubdate">2020-08-18</p>
+              <p class="pubeditors">Todd Reifsteck, Ilya Grigorik, Yoav Weiss, Arvind Jain, Jatinder Mann, Zhiheng Wang, Anderson Quach</p>
+            <li><span class="cr"><a href="https://www.w3.org/TR/2017/CR-resource-timing-1-20170330/">Resource Timing Level 1</a></span>
+              <p class="pubdate">2017-03-30</p>
+              <p class="pubeditors">Arvind Jain, Todd Reifsteck, Jatinder Mann, Zhiheng Wang, Anderson Quach</p>
+          </ul>
+        </section>
+        <section>
+          <h3>Server Timing</h3>
+          <ul>
+            <li><span class="wd"><a href="https://www.w3.org/TR/2020/WD-server-timing-20200728/">Server Timing</a></span>
+              <p class="pubdate">2020-07-28</p>
+              <p class="pubeditors">Charles Vazac, Ilya Grigorik</p>
+          </ul>
+        </section>
+        <section>
+          <h3>Timing Entry Names Registry</h3>
+          <ul>
+            <li><span class="wd"><a href="https://www.w3.org/TR/2019/WD-timing-entrytypes-registry-20190723/">Timing Entry Names Registry</a></span>
+              <p class="pubdate">2019-07-23</p>
+              <p class="pubeditors">Philippe Le Hégaret</p>
+          </ul>
+        </section>
+        <section>
+          <h3>User Timing</h3>
+          <ul>
+            <li><span class="wd"><a href="https://www.w3.org/TR/2020/WD-user-timing-3-20200818/">User Timing Level 3</a></span>
+              <p class="pubdate">2020-08-18</p>
+              <p class="pubeditors">Ilya Grigorik, Nicolas Pena Moreno, Jatinder Mann, Zhiheng Wang, Anderson Quach</p>
+            <li><span class="rec"><a href="https://www.w3.org/TR/2019/REC-user-timing-2-20190226/">User Timing Level 2</a></span>
+              <p class="pubdate">2019-02-26</p>
+              <p class="pubeditors">Ilya Grigorik</p>
+          </ul>
+        </section>
+      </div>
+
+  </body>
+</html>
