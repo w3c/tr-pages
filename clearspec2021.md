@@ -1,4 +1,4 @@
-# ClearSpec 2021  (send comments to plh@w3.org)
+# ClearSpec 2021
 
 Provide clarity in W3C products
  
