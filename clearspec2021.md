@@ -64,3 +64,85 @@ ETA:
  3 can be done in June/July (needs Jean-Gui/Denis)
 
  (interested: Judy, Ralph, Dom?)
+
+# Project #2
+
+Document and inform about the level of adoption of various documents, including our standards
+
+1. Gather implementation and intent to implement.
+     Work with MDN (Dom, Joe Medley) and mobile roadmap (Dom/Francois) to refine proposal
+1. Establish how we'll carry annotations in /TR documents and implement. Reuse/enhance existing respec/bikeshed infrastructure
+1. Provide a general picture on the level of implementation to our browser-related specifications (present at AC Meeting 2021?)
+1. Establish guidance on how to increase implementation experience.
+     Poll the Working Groups on implementation experience challenges.
+     browser vs non-browser implementation [RRS: are polyfills different from "browser"?]
+1. Consider extending this beyond browser implementations (ie going beyond MDN)
+
+# Project #3
+
+1. Differentiate /TR documents: URL, style, listings, versioning
+  Modest revision of templates for W3C documents published on /TR
+    Look at
+     https://rawgit.com/w3c/tr-design/versioning/versions-proposal.html
+     https://medium.com/jefferson-w3c-collaboration
+  For a major design, we should follow:
+    https://github.com/w3c/tr-design/blob/gh-pages/README.md#guidelines-for-a-proper-design
+    Major redesign should be part of W3C Relaunch.
+       Note: we'll need a proper design lead for a major redesign.
+  For minor changes (tweaks of CSS), we can do so more easily
+    eg changing the color of the "W3C Recommendation" logo
+
+1. Revisit latest/upcoming/ed and revise specref (PLH, Dom, Denis)
+  Include: Comm, Shawn
+
+ETA:
+ for modest change, we can do so within 3 months
+   Note: Denis must not be expected until June
+ for major change, the current workflow would mean January 1, 2022, as part
+   of W3C relaunch.
+
+# Project #4
+
+Better referencing of editor's drafts (ie move away from citing github.io URIs). drafts.w3.org proposal
+
+1. Refine proposal
+      https://pad.w3.org/p/group-editors-draft
+   2 months
+1. Implement
+  June/July (needs Jean-Gui/Denis)
+1. Report on delays eds vs trs
+  eg TR is 3 years behind the editor's draft
+   
+See also https://github.com/w3c/w3process/issues/435
+   
+Involves: Fantasai
+
+# Project #5
+
+Nomenclature and Naming
+
+1. Refine classification and text at
+     https://w3c.github.io/tr-pages/documents.html
+    (merge category 1 & 2)
+
+1. Push the classification and text into /TR
+     (this should remain minimal)
+
+1. Revisit https://www.w3.org/standards/
+   https://www.w3.org/standards/faq
+   (this should remain minimal)
+       (maybe merged with 4)
+       should we contribute to
+         World Wide Web Consortium - Wikipedia ?
+
+1. Work with website redesign project to further adopt the classification
+      in public pages
+       /TR listing
+        Consider pushing Notes off the default view of /TR?
+        [RRS: if so, please make a convenience URI for all (current) Notes]
+
+1. Loopback to the W3C Process (2022?)
+
+ ETA: 3 months
+    4 needs to be ready by May if done
+    Needs to be worked on with Dom, Denis
