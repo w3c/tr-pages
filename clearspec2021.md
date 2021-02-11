@@ -146,3 +146,10 @@ Nomenclature and Naming
  ETA: 3 months
     4 needs to be ready by May if done
     Needs to be worked on with Dom, Denis
+
+# Timeline
+
+1. Global - January 28
+1. Week of Feb 1st: twitter, spec-prod, WICG Chairs, chairs, CCG, ...
+1. AB: Feb 18?
+1. AC forum: Feb 22 or March 1 (or sooner if AB can't do Feb 18)
