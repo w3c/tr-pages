@@ -7,7 +7,7 @@ Provide clarity in W3C products
 
 # Goals
 
-1. Help the public to differentiate among documents produced by W3C Groups (W/I/B/C).
+1. Help the public to differentiate among documents produced by W3C Groups (W/I/B/C) using multiple dimensions
 1. Establish W3C Recommendations as the sole W3C Web standards (in comparison to other types of W3C documents)
 1. document and inform about the level of adoption of various documents, including our standards.
 
