@@ -69,7 +69,7 @@ ETA:
 
 Document and inform about the level of adoption of various documents, including our standards
 
-1. Gather implementation and intent to implement.
+1. Gather implementation and intent to implement. Use [adoption](https://dontcallmedom.github.io/adoption-monitor/)
      Work with MDN (Dom, Joe Medley) and mobile roadmap (Dom/Francois) to refine proposal
 1. Establish how we'll carry annotations in /TR documents and implement. Reuse/enhance existing respec/bikeshed infrastructure
 1. Provide a general picture on the level of implementation to our browser-related specifications (present at AC Meeting 2021?)
