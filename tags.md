@@ -4,6 +4,7 @@
 * Browser: Specifications for Web browsers and other interactive user agents
 * CSS: How documents are presented on screens using CSS
 * Data: Specifications to facilitate the creation, exchange, and usage of semantically rich data on the Web
+* Digital Publishing: Specifications dealing with digital publishing like electronic books or journals, and based on W3C technologies such as HTML, SVG, CSS, or MathML.
 * DOM: Specifications describing the Document Object Model (DOM)
 * Graphics: Specifications dealing with graphical content (image formats, web fonts, canvas, etc)
 * HTML: Defines the HyperText Markup Language (HTML) format and its extensions
