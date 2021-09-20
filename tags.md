@@ -16,6 +16,7 @@
 * Protocol: Defining the different protocols used on the Web
 * Security: Provides technical and policy mechanisms to improve security and enable secure cross-site communications for applications on the Web
 * Web API: Specifications providing APIs to allow Web applications to access specific features or data
+* Web Fonts: How fonts are specified, used for presenting text, and automatically downloaded on demand
 * WoT: Provides interoperability across Internet of Things (IoT) Platforms and application domains
 * XML: Specifications defining the Extensible Markup Language (XML) and its extensions
 
