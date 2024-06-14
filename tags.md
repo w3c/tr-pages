@@ -10,7 +10,7 @@
 * HTML: Defines the HyperText Markup Language (HTML) format and its extensions
 * HTTP: client-server protocol allowing resources fetching such as HTML.
 * i18n: How to use Web Technologies with different languages, scripts and culture
-* Media: Specificaitons related to audio, video and captions and other Web Media related items
+* Media: Specifications related to audio, video and captions and other Web Media related items
 * Performance: Specifications to measure and improve aspects of application performance of user agent features and API
 * Privacy: Specifications aiming at improving support for user privacy on the Web
 * Protocol: Defining the different protocols used on the Web
